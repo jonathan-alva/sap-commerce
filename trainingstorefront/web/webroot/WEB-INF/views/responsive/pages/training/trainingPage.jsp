@@ -12,15 +12,15 @@
     <c:url value="/" var="homePageUrl" />
 
 
-    <cms:pageSlot position="Section1" var="comp" element="div" class="errorNotFoundPageMiddle">
+    <cms:pageSlot position="MiddleContent" var="comp" element="div" class="errorNotFoundPageMiddle">
         <cms:component component="${comp}" element="div" class="errorNotFoundPageMiddle-component" />
     </cms:pageSlot>
-    <cms:pageSlot position="Section2A" var="comp" element="div" class="errorNotFoundPageBottom">
-        <cms:component component="${comp}" element="div" class="errorNotFoundPageBottom-component"/>
-    </cms:pageSlot>
-    <cms:pageSlot position="Section2B" var="feature" element="div" class="errorNotFoundPageSide">
-        <cms:component component="${feature}" element="div" class="errorNotFoundPageSide-component"/>
-    </cms:pageSlot>
+    <%--<cms:pageSlot position="Section2A" var="comp" element="div" class="errorNotFoundPageBottom">--%>
+        <%--<cms:component component="${comp}" element="div" class="errorNotFoundPageBottom-component"/>--%>
+    <%--</cms:pageSlot>--%>
+    <%--<cms:pageSlot position="Section2B" var="feature" element="div" class="errorNotFoundPageSide">--%>
+        <%--<cms:component component="${feature}" element="div" class="errorNotFoundPageSide-component"/>--%>
+    <%--</cms:pageSlot>--%>
 
     <div class="error-page">
         <a class="btn btn-default js-shopping-button" href="${fn:escapeXml(homePageUrl)}">
