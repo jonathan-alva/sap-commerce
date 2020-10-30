@@ -1293,10 +1293,13 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ###  Training Page #######
 INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
                                    ;;TrainingParagraphComponent;Training Paragraph Component;TrainingParagraphComponent
+                                   ;;TrainingParagraphComponent2;Training Paragraph Component;TrainingParagraphComponent2
 # Create ContentSlots
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
                          ;;MiddleContent-TrainingPage;Middle Content Slot for Training Page;true;TrainingParagraphComponent;;;
+                         ;;BottomContent-TrainingPage;Bottom Content Slot for Training Page;true;TrainingParagraphComponent2;;;
 
 # Create Content Slots for Page
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='training-page'];contentSlot(uid,$contentCV)[unique=true]
                                 ;;MiddleContent-TrainingPage;MiddleContent;;MiddleContent-TrainingPage
+                                ;;BottomContent-TrainingPage;BottomContent;;BottomContent-TrainingPage

@@ -592,3 +592,4 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
 
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
                             ;;TrainingParagraphComponent;"Test Training Page";
+                            ;;TrainingParagraphComponent2;"Test Training Page Bottom Content"

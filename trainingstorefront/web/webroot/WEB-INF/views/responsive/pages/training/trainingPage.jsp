@@ -15,6 +15,10 @@
     <cms:pageSlot position="MiddleContent" var="comp" element="div" class="errorNotFoundPageMiddle">
         <cms:component component="${comp}" element="div" class="errorNotFoundPageMiddle-component" />
     </cms:pageSlot>
+
+    <cms:pageSlot position="BottomContent" var="comp" element="div" class="errorNotFoundPageMiddle">
+        <cms:component component="${comp}" element="div" class="errorNotFoundPageMiddle-component" />
+    </cms:pageSlot>
     <%--<cms:pageSlot position="Section2A" var="comp" element="div" class="errorNotFoundPageBottom">--%>
         <%--<cms:component component="${comp}" element="div" class="errorNotFoundPageBottom-component"/>--%>
     <%--</cms:pageSlot>--%>

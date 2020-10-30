@@ -592,4 +592,6 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
                                 ;;FooterNavigationComponent;"Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
 
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
-                            ;;TrainingParagraphComponent;"Test Training Page";
+                            ;;TrainingParagraphComponent;"Test Training Page"
+                            ;;TrainingParagraphComponent2;"Test Training Page Bottom Content"
+

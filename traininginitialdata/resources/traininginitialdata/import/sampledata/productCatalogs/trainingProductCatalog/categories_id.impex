@@ -10,7 +10,7 @@ $productCatalogName = Training Product Catalog
 $catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
 
 # Language
-$lang = en
+$lang = id
 
 # Create Categories
 UPDATE Category; code[unique = true]; $catalogVersion; name[lang = $lang]
