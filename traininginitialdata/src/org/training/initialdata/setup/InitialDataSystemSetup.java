@@ -30,7 +30,8 @@ import org.springframework.beans.factory.annotation.Required;
  * This class provides hooks into the system's initialization and update processes.
  */
 @SystemSetup(extension = TrainingInitialDataConstants.EXTENSIONNAME)
-public class InitialDataSystemSetup extends AbstractSystemSetup {
+public class InitialDataSystemSetup extends AbstractSystemSetup
+{
     @SuppressWarnings("unused")
     private static final Logger LOG = Logger.getLogger(InitialDataSystemSetup.class);
 
@@ -52,7 +53,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
      */
     @Override
     @SystemSetupParameterMethod
-    public List<SystemSetupParameter> getInitializationOptions() {
+    public List<SystemSetupParameter> getInitializationOptions()
+    {
         final List<SystemSetupParameter> params = new ArrayList<SystemSetupParameter>();
 
         params.add(createBooleanSystemSetupParameter(IMPORT_CORE_DATA, "Import Core Data", true));
@@ -67,10 +69,12 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
      * Implement this method to create initial objects. This method will be called by system creator during
      * initialization and system update. Be sure that this method can be called repeatedly.
      *
-     * @param context the context provides the selected parameters and values
+     * @param context
+     *           the context provides the selected parameters and values
      */
     @SystemSetup(type = Type.ESSENTIAL, process = Process.ALL)
-    public void createEssentialData(final SystemSetupContext context) {
+    public void createEssentialData(final SystemSetupContext context)
+    {
         // Add Essential Data here as you require
     }
 
@@ -95,11 +99,13 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
      * getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
      * </pre>
      *
-     * @param context the context provides the selected parameters and values
+     * @param context
+     *           the context provides the selected parameters and values
      */
     @SystemSetup(type = Type.PROJECT, process = Process.ALL)
-    public void createProjectData(final SystemSetupContext context) {
-        /**
+    public void createProjectData(final SystemSetupContext context)
+    {
+        /*
          * Add import data for each site you have configured
          */
         LOG.info("::: Training Project Data Update. :::");
@@ -111,21 +117,25 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
         sampleImportData.setStoreNames(Arrays.asList(TRAINING));
         importData.add(sampleImportData);
 
-        // Core Data
+        // Core data
         final boolean importCoreData = getBooleanSystemSetupParameter(context, IMPORT_CORE_DATA);
         if (importCoreData) {
             getCoreDataImportService().execute(this, context, importData);
+
             importTrainingCoreData(context);
+
             getEventService().publishEvent(new CoreDataImportedEvent(context, importData));
             getCoreDataImportService().synchronizeContentCatalog(this, context, TRAINING, true);
             getCoreDataImportService().synchronizeProductCatalog(this, context, TRAINING, true);
         }
 
-        // Sample Data
+        // Sample data
         final boolean importSampleData = getBooleanSystemSetupParameter(context, IMPORT_SAMPLE_DATA);
         if (importSampleData) {
             getSampleDataImportService().execute(this, context, importData);
+
             importTrainingSampleData(context);
+
             getEventService().publishEvent(new SampleDataImportedEvent(context, importData));
             getSampleDataImportService().synchronizeContentCatalog(this, context, TRAINING, true);
             getSampleDataImportService().synchronizeProductCatalog(this, context, TRAINING, true);
@@ -133,7 +143,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
     }
 
     /**
-     * Custom method to import the training core data
+     * Custom method to import the training core data.
      *
      * @param context context
      */
@@ -144,19 +154,23 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
             final String[] impexFileArray = impexFiles.split(",");
             for (final String impexFile : impexFileArray) {
                 if (impexFile != null) {
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/contentCatalogs/%sContentCatalog/%s", extensionName, TRAINING, impexFile), false);
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/productCatalogs/%sProductCatalog/%s", extensionName, TRAINING, impexFile), false);
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/common/%s", extensionName, impexFile), false);
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/stores/training/%s", extensionName, impexFile), false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/contentCatalogs/%sContentCatalog/%s",
+                            extensionName, TRAINING, impexFile), false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/productCatalogs/%sProductCatalog/%s",
+                            extensionName, TRAINING, impexFile), false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/common/%s", extensionName, impexFile),
+                            false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/coredata/stores/training/%s", extensionName, impexFile),
+                            false);
                 }
             }
         }
     }
 
     /**
-     * Custom method to import the training sample data
+     * Custom method to import the training sample data.
      *
-     * @param context context
+     * @param context the context
      */
     private void importTrainingSampleData(final SystemSetupContext context) {
         final String extensionName = context.getExtensionName();
@@ -165,29 +179,36 @@ public class InitialDataSystemSetup extends AbstractSystemSetup {
             final String[] impexFileArray = impexFiles.split(",");
             for (final String impexFile : impexFileArray) {
                 if (impexFile != null) {
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/%s", extensionName, TRAINING, impexFile), false);
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/sampledata/productCatalogs/%sProductCatalog/%s", extensionName, TRAINING, impexFile), false);
-                    getSetupImpexService().importImpexFile(String.format("/%s/import/sampledata/stores/training/%s", extensionName, impexFile), false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/%s",
+                            extensionName, TRAINING, impexFile), false);
+                    getSetupImpexService().importImpexFile(String.format("/%s/import/sampledata/productCatalogs/%sProductCatalog/%s",
+                            extensionName, TRAINING, impexFile), false);
+                    getSetupImpexService().importImpexFile(
+                            String.format("/%s/import/sampledata/stores/training/%s", extensionName, impexFile), false);
                 }
             }
         }
     }
 
-    public CoreDataImportService getCoreDataImportService() {
+    public CoreDataImportService getCoreDataImportService()
+    {
         return coreDataImportService;
     }
 
     @Required
-    public void setCoreDataImportService(final CoreDataImportService coreDataImportService) {
+    public void setCoreDataImportService(final CoreDataImportService coreDataImportService)
+    {
         this.coreDataImportService = coreDataImportService;
     }
 
-    public SampleDataImportService getSampleDataImportService() {
+    public SampleDataImportService getSampleDataImportService()
+    {
         return sampleDataImportService;
     }
 
     @Required
-    public void setSampleDataImportService(final SampleDataImportService sampleDataImportService) {
+    public void setSampleDataImportService(final SampleDataImportService sampleDataImportService)
+    {
         this.sampleDataImportService = sampleDataImportService;
     }
 }

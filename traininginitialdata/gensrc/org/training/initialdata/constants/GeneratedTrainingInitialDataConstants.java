@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Oct 28, 2020, 12:45:13 PM                   ---
+ * --- Generated at Oct 28, 2020, 6:55:17 PM                    ---
  * ----------------------------------------------------------------
  */
 package org.training.initialdata.constants;
