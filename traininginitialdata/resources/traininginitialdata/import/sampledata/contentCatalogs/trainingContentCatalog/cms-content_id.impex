@@ -78,6 +78,8 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$
 #                       ;;TripodsCategoryLink;"Tripods"
                        ;;TwitterLink;"Twitter"
                        ;;VisitSAPLink;"Visit SAP"
+                       ;;NewLink;"New"
+
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];&imageRef;folder(qualifier)[default='images'];altText
@@ -593,3 +595,4 @@ UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
                             ;;TrainingParagraphComponent;"Test Training Page";
                             ;;TrainingParagraphComponent2;"Test Training Page Bottom Content"
+                            ;;NewParagraphComponent;"New Page"

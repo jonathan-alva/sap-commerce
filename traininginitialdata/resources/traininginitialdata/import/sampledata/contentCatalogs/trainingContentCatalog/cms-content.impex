@@ -84,8 +84,10 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; TwitterLink             ; Twitter Link                  ; "http://www.twitter.com/SAP_CX"           ; TwitterLink             ; TwitterLink             ; newWindow                           ;          ;         ;
                               ;                          ; AgileCommerceBlogLink   ; Agile Commerce Blog Link      ; "http://www.agile-commerce.com/"          ; AgileCommerceBlogLink   ; AgileCommerceBlogLink   ; newWindow                           ;          ;         ;
                               ;                          ; LinkedInLink            ; Linked In Link                ; "http://www.linkedin.com/groups/5063400"  ; LinkedInLink            ; LinkedInLink            ; newWindow                           ;          ;         ;
-                              ;                          ; FAQLink                 ; FAQ Link                      ; /faq                                      ; FAQLink                 ; FAQLin                  ;                                     ;          ;         ;
+                              ;                          ; FAQLink                 ; FAQ Link                      ; /faq                                      ; FAQLink                 ; FAQLink                 ;                                     ;          ;         ;
                               ;                          ; TermsAndConditionsLink  ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink  ; TermsAndConditionsLink  ;                                     ;          ;         ;
+                              ;                          ; NewLink                 ; New Link                      ; /new-page                                 ; NewLink                 ; NewLink                 ;                                     ;          ;         ;
+                              ;                          ; NewFAQLink              ; New FAQ Link                  ; /faq                                      ; NewFAQLink              ; NewFAQLink              ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -1212,26 +1214,31 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
-                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode
+                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode,NewNavNode,NewFAQNavNode,TermsAndConditionsNavNode
 
 ## level 3. children of Category Nav ##
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name               ; &nodeRef            ; children(uid, $contentCV)   ; links(&linkRef);
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]        ; $contentCV[unique = true]; name                       ; &nodeRef                  ; children(uid, $contentCV)   ; links(&linkRef);
 #                               ; AllBedsNavNode      ;                          ; All Bed Links      ; AllBedsNavNode      ; BedLinksNavNode
-                               ; AllFashionsNavNode  ;                          ; All Fashion Links  ; AllFashionsNavNode  ; ShirtNavNode,TrouserNavNode ;
-                               ; AboutUsNavNode      ;                          ; About Us Links     ; AboutUsNavNode      ;                             ;
-                               ; BlogsNavNode        ;                          ; Blogs Links        ; BlogsNavNode        ;                             ;
-                               ; GuaranteeNavNode    ;                          ; Guarantee Links    ; GuaranteeNavNode    ;                             ;
-                               ; ConfirmationNavNode ;                          ; Confirmation Links ; ConfirmationNavNode ;                             ;
+                               ; AllFashionsNavNode        ;                          ; All Fashion Links          ; AllFashionsNavNode        ; ShirtNavNode,TrouserNavNode ;
+                               ; AboutUsNavNode            ;                          ; About Us Links             ; AboutUsNavNode            ;                             ;
+                               ; BlogsNavNode              ;                          ; Blogs Links                ; BlogsNavNode              ;                             ;
+                               ; GuaranteeNavNode          ;                          ; Guarantee Links            ; GuaranteeNavNode          ;                             ;
+                               ; ConfirmationNavNode       ;                          ; Confirmation Links         ; ConfirmationNavNode       ;                             ;
+                               ; NewNavNode                ;                          ; New Links                  ; NewNavNode                ;                             ;
+                               ; NewFAQNavNode             ;                          ; New FAQ Links              ; NewFAQNavNode             ;                             ;
+                               ; TermsAndConditionsNavNode ;                          ; Terms And Conditions Links ; TermsAndConditionsNavNode ;                             ;
 
 ## entries of the above navigation nodes ##
-INSERT_UPDATE CMSNavigationEntry; uid[unique = true]       ; $contentCV[unique = true]; name                               ; navigationNode(&nodeRef); item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
-# BEd -- entry
+INSERT_UPDATE CMSNavigationEntry; uid[unique = true]             ; $contentCV[unique = true]; name                                       ; navigationNode(&nodeRef)  ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
 #                                ; AllBedsNavNodeEntry      ;                          ; All Beds Category NavgaitionNode Entry ; AllBedsNavNode          ; AllBedsCategoryLink
-                                ; AboutUsNavNodeEntry      ;                          ; About Us Navigation Node Entry     ; AboutUsNavNode          ; AboutUsLink                                            ;
-                                ; BlogsNavNodeEntry        ;                          ; Blogs Navigation Node Entry        ; BlogsNavNode            ; BlogsLink                                              ;
-                                ; GuaranteeNavNodeEntry    ;                          ; Quarantee Navigation Node Entry    ; GuaranteeNavNode        ; GuaranteeLink                                          ;
-                                ; ConfirmationNavNodeEntry ;                          ; Confirmation Navigation Node Entry ; ConfirmationNavNode     ; ConfirmationLink                                       ;
-                                ; AllFashionsNavNodeEntry  ;                          ; All Fashions Navigation Node Entry ; AllFashionsNavNode      ; AllFashionsCategoryLink                                ;
+                                ; AboutUsNavNodeEntry            ;                          ; About Us Navigation Node Entry             ; AboutUsNavNode            ; AboutUsLink                                            ;
+                                ; BlogsNavNodeEntry              ;                          ; Blogs Navigation Node Entry                ; BlogsNavNode              ; BlogsLink                                              ;
+                                ; GuaranteeNavNodeEntry          ;                          ; Quarantee Navigation Node Entry            ; GuaranteeNavNode          ; GuaranteeLink                                          ;
+                                ; ConfirmationNavNodeEntry       ;                          ; Confirmation Navigation Node Entry         ; ConfirmationNavNode       ; ConfirmationLink                                       ;
+                                ; AllFashionsNavNodeEntry        ;                          ; All Fashions Navigation Node Entry         ; AllFashionsNavNode        ; AllFashionsCategoryLink                                ;
+                                ; NewNavNodeEntry                ;                          ; New Navigation Node Entry                  ; NewNavNode                ; NewLink                                                ;
+                                ; NewFAQNavNodeEntry             ;                          ; New FAQ Navigation Node Entry              ; NewFAQNavNode             ; NewFAQLink                                             ;
+                                ; TermsAndConditionsNavNodeEntry ;                          ; Terms And Conditions Navigation Node Entry ; TermsAndConditionsNavNode ; TermsAndConditionsLink                                 ;
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name; url; &linkRef; &componentRef; target(code)[default = 'sameWindow']; $category; $product;
@@ -1313,3 +1320,15 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]         ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'training-page']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; MiddleContent-TrainingPage ; MiddleContent          ;                                                                ; MiddleContent-TrainingPage
                                 ;                          ; BottomContent-TrainingPage ; BottomContent          ;                                                                ; BottomContent-TrainingPage
+
+###  New Page #######
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]    ; name                    ; &componentRef
+                                   ;                          ; NewParagraphComponent ; New Paragraph Component ; NewParagraphComponent
+# Create ContentSlots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; name                             ; active; cmsComponents(&componentRef); ; ;
+                         ;                          ; MiddleContent-NewPage ; Middle Content Slot for New Page ; true  ; NewParagraphComponent       ; ; ;
+
+# Create Content Slots for Page
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]    ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'new-page']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; MiddleContent-NewPage ; MiddleContent          ;                                                           ; MiddleContent-NewPage
+

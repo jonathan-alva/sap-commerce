@@ -38,6 +38,7 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
                   ;;update-profile;"Update Profile"
                   ;;updatePassword;"Update Forgotten Password"
                   ;;training-page;"Training Page"
+                  ;;new-page;"New Page"
 
 
 # Category Pages
