@@ -279,6 +279,7 @@ INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[uni
                    ; widescreen            ;                          ; banner-3-demo-1400x440.jpg ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; widescreen            ;                          ; banner-4-demo-1400x440.jpg ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; widescreen            ;                          ; discount-banner-1400.png   ; $siteResource/images/banners/homepage/responsive/discount-banner-1400.png                      ;                             ; discount-banner-1400.png ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; widescreen            ;                          ; top-banner.jpg             ; $siteResource/images/banners/homepage/top-banner.jpg                                           ;                             ; top-banner.jpg           ;                                      ; "Top Banner Example"
                    ; mobile                ;                          ; banner-demo-480x320.jpg    ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
                    ; mobile                ;                          ; banner-2-demo-480x320.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
                    ; mobile                ;                          ; banner-3-demo-480x320.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
@@ -301,6 +302,7 @@ INSERT_UPDATE MediaContainer; qualifier[unique = true]  ; $medias; $contentCV[un
                             ; demo-homepage-spalsh-2-en ; banner-2-demo-1400x440.jpg,banner-2-demo-480x320.jpg,banner-2-demo-770x350.jpg,banner-2-demo-960x330.png
                             ; demo-homepage-spalsh-3-en ; banner-3-demo-1400x440.jpg,banner-3-demo-480x320.jpg,banner-3-demo-770x350.jpg,banner-3-demo-960x330.png
                             ; demo-homepage-spalsh-4-en ; banner-4-demo-1400x440.jpg,banner-4-demo-480x320.jpg,banner-4-demo-770x350.jpg,banner-4-demo-960x330.png
+                            ; top-banner                ; top-banner.jpg
 
 INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                 ; $mediaContainer
                                              ;                          ; DemoHompageDiscountBannerComponent ; demo-homepage-discount-en
@@ -308,6 +310,7 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-2 ; demo-homepage-spalsh-2-en
                                              ;                          ; DemoHompageSplashBannerComponent-3 ; demo-homepage-spalsh-3-en
                                              ;                          ; DemoHompageSplashBannerComponent-4 ; demo-homepage-spalsh-4-en
+                                             ;                          ; Section0BannerComponent            ; top-banner
 # Home page slot 2A
 
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = en];
@@ -594,8 +597,12 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
 UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; notice[lang = en][translator = de.hybris.platform.acceleratorservices.dataimport.batch.converter.CopyrightTranslator, dateFormat = yyyy]
                                 ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; content[lang = en];
-                            ;                          ; TrainingParagraphComponent  ; "Test Training Page"
-                            ;                          ; TrainingParagraphComponent2 ; "Test Training Page Bottom Content"
-                            ;                          ; NewParagraphComponent       ; "New Page"
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = en];
+                            ;                          ; TrainingParagraphComponent          ; "Test Training Page"
+                            ;                          ; TrainingParagraphComponent2         ; "Test Training Page Bottom Content"
+                            ;                          ; NewParagraphComponent               ; "New Page"
+                            ;                          ; NewParagraphSection1HeaderComponent ; "Section 1"
+                            ;                          ; NewParagraphSection2HeaderComponent ; "Section 2"
+                            ;                          ; NewParagraphSection1Component       ; "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur nibh eget augue elementum, nec elementum felis ultricies. Nulla est justo, dictum a augue sed, molestie pretium ex. Morbi elementum condimentum orci, at pulvinar dui tincidunt at. Praesent eget felis elit. Quisque eu turpis ornare, feugiat lectus nec, facilisis leo. Mauris scelerisque tellus in aliquam dignissim. Donec sed molestie nisl."
+                            ;                          ; NewParagraphSection2Component       ; "Ut quis lorem nec purus tempus interdum sit amet et neque. Cras vel orci et augue tristique efficitur. Vivamus vestibulum sodales lobortis. Quisque lorem risus, consectetur id gravida non, blandit eget felis. Donec non nisl eu eros euismod finibus. Aliquam erat volutpat. Suspendisse eget augue quis tortor volutpat sagittis non vitae ipsum. Morbi ut suscipit ex. Nullam non nibh a lorem sollicitudin venenatis vitae fringilla augue. Praesent aliquam ex vitae vehicula efficitur. Nam eget mauris consectetur, imperdiet enim non, luctus velit."
 

@@ -4,6 +4,11 @@
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 
 <template:page pageTitle="${pageTitle}">
+    <div class="no-space">
+    <cms:pageSlot position="Section0" var="feature" element="div" class="row no-margin">
+        <cms:component component="${feature}" element="div" class="col-xs-12 col-sm-12 no-space yComponentWrapper"/>
+    </cms:pageSlot>
+    </div>
     <cms:pageSlot position="Section1" var="feature">
         <cms:component component="${feature}" />
     </cms:pageSlot>

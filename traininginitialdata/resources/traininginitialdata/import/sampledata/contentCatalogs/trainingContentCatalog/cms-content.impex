@@ -357,6 +357,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; n
                          ;                          ; Section3CSlot-Homepage ; Section3C Slot for Homepage ; true  ; ElectronicsHomepageCarouselComponent
                          ;                          ; Section4Slot-Homepage  ; Section4 Slot for Homepage  ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
                          ;                          ; Section5Slot-Homepage  ; Section5 Slot for Homepage  ; true  ; NextDayDeliveryBanner
+                         ;                          ; Section0Slot-Homepage  ; Section0 Slot for Homepage  ; true  ; TopBannerHomepage
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; Section1-Homepage  ; Section1               ;                                                           ; Section1Slot-Homepage
@@ -370,7 +371,8 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Section6-Homepage  ; Section6               ;                                                           ; Section6Slot-Homepage
                                 ;                          ; Section7-Homepage  ; Section7               ;                                                           ; Section7Slot-Homepage
                                 ;                          ; Section8-Homepage  ; Section8               ;                                                           ; Section8Slot-Homepage
-                                ;                          ; Section9-Homepage  ; Section8               ;                                                           ; Section9Slot-Homepage
+                                ;                          ; Section9-Homepage  ; Section9               ;                                                           ; Section9Slot-Homepage
+                                ;                          ; Section0-Homepage  ; Section0               ;                                                           ; Section0Slot-Homepage
 
 ###### Electronics Camera Accessories and Supplies Category Landing Page - not used ######
 
@@ -752,6 +754,14 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsCom
 
 
 #################    HOME PAGE START     #################
+
+## Home Section 0
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                ; urlLink   ; &componentRef
+                                             ;                          ; Section0BannerComponent ; Homepage Top Banner ; /new-page ; Section0BannerComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; active; cmsComponents(&componentRef)
+                         ;                          ; Section0Slot-Homepage ; true  ; Section0BannerComponent
+
 
 ###  Home page splash Slot 1  #######
 INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                 ; name                                           ; urlLink          ; &componentRef
@@ -1322,13 +1332,25 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; BottomContent-TrainingPage ; BottomContent          ;                                                                ; BottomContent-TrainingPage
 
 ###  New Page #######
-INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]    ; name                    ; &componentRef
-                                   ;                          ; NewParagraphComponent ; New Paragraph Component ; NewParagraphComponent
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                     ; &componentRef
+                                   ;                          ; NewParagraphComponent               ; New Paragraph Component                  ; NewParagraphComponent
+                                   ;                          ; NewParagraphSection1Component       ; New Paragraph Section 1 Component        ; NewParagraphSection1Component
+                                   ;                          ; NewParagraphSection2Component       ; New Paragraph Section 2 Component        ; NewParagraphSection2Component
+                                   ;                          ; NewParagraphSection1HeaderComponent ; New Paragraph Section 1 Header Component ; NewParagraphSection1HeaderComponent
+                                   ;                          ; NewParagraphSection2HeaderComponent ; New Paragraph Section 2 Header Component ; NewParagraphSection2HeaderComponent
 # Create ContentSlots
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; name                             ; active; cmsComponents(&componentRef); ; ;
-                         ;                          ; MiddleContent-NewPage ; Middle Content Slot for New Page ; true  ; NewParagraphComponent       ; ; ;
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]            ; name                                       ; active; cmsComponents(&componentRef)        ; ; ;
+                         ;                          ; MiddleContent-NewPage         ; Middle Content Slot for New Page           ; true  ; NewParagraphComponent               ; ; ;
+                         ;                          ; Section1Content-NewPage       ; Section 1 Content Slot for New Page        ; true  ; NewParagraphSection1Component       ; ; ;
+                         ;                          ; Section2Content-NewPage       ; Section 2 Content Slot for New Page        ; true  ; NewParagraphSection2Component       ; ; ;
+                         ;                          ; Section1HeaderContent-NewPage ; Section 1 Header Content Slot for New Page ; true  ; NewParagraphSection1HeaderComponent ; ; ;
+                         ;                          ; Section2HeaderContent-NewPage ; Section 2 Header Content Slot for New Page ; true  ; NewParagraphSection2HeaderComponent ; ; ;
 
 # Create Content Slots for Page
-INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]    ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'new-page']; contentSlot(uid, $contentCV)[unique = true]
-                                ;                          ; MiddleContent-NewPage ; MiddleContent          ;                                                           ; MiddleContent-NewPage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]            ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'new-page']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; MiddleContent-NewPage         ; MiddleContent          ;                                                           ; MiddleContent-NewPage
+                                ;                          ; Section1Content-NewPage       ; Section1Content        ;                                                           ; Section1Content-NewPage
+                                ;                          ; Section2Content-NewPage       ; Section2Content        ;                                                           ; Section2Content-NewPage
+                                ;                          ; Section1HeaderContent-NewPage ; Section1HeaderContent  ;                                                           ; Section1HeaderContent-NewPage
+                                ;                          ; Section2HeaderContent-NewPage ; Section2HeaderContent  ;                                                           ; Section2HeaderContent-NewPage
 
