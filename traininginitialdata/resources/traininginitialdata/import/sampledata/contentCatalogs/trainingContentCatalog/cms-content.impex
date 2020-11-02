@@ -88,6 +88,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; TermsAndConditionsLink  ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink  ; TermsAndConditionsLink  ;                                     ;          ;         ;
                               ;                          ; NewLink                 ; New Link                      ; /new-page                                 ; NewLink                 ; NewLink                 ;                                     ;          ;         ;
                               ;                          ; NewFAQLink              ; New FAQ Link                  ; /faq                                      ; NewFAQLink              ; NewFAQLink              ;                                     ;          ;         ;
+                              ;                          ; TopBannerHomepageLink   ; Top Banner Homepage Link      ; /top-banner-page                          ; TopBannerHomepageLink   ; TopBannerHomepageLink   ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -756,8 +757,8 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsCom
 #################    HOME PAGE START     #################
 
 ## Home Section 0
-INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                ; urlLink   ; &componentRef
-                                             ;                          ; Section0BannerComponent ; Homepage Top Banner ; /new-page ; Section0BannerComponent
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                ; urlLink          ; &componentRef
+                                             ;                          ; Section0BannerComponent ; Homepage Top Banner ; /top-banner-page ; Section0BannerComponent
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; active; cmsComponents(&componentRef)
                          ;                          ; Section0Slot-Homepage ; true  ; Section0BannerComponent
@@ -1354,3 +1355,17 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Section1HeaderContent-NewPage ; Section1HeaderContent  ;                                                           ; Section1HeaderContent-NewPage
                                 ;                          ; Section2HeaderContent-NewPage ; Section2HeaderContent  ;                                                           ; Section2HeaderContent-NewPage
 
+###  Homepage Top Banner Page #######
+#INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                     ; &componentRef
+#                                   ;                          ; NewParagraphComponent               ; New Paragraph Component                  ; NewParagraphComponent
+
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                ; urlLink          ; &componentRef
+                                             ;                          ; MiddleContentTopBannerComponent ; Homepage Top Banner ;  ; MiddleContentTopBannerComponent
+
+# Create ContentSlots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]                 ; name                                                ; active; cmsComponents(&componentRef)  ; ; ;
+                         ;                          ; MiddleContent-TopBannnerHomepage   ; Middle Content Slot for Top Banner Homepage Page    ; true  ; MiddleContentTopBannerComponent         ; ; ;
+
+# Create Content Slots for Page
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]               ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'top-banner-page']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; MiddleContent-TopBannnerHomepage ; MiddleContent          ;                                                                  ; MiddleContent-TopBannnerHomepage

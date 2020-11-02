@@ -18,27 +18,27 @@
     <div class="container">
         <h1>
             <cms:pageSlot position="MiddleContent" var="comp" element="div" class="text-center">
-                <cms:component component="${comp}" element="div" class=""/>
+                <cms:component component="${comp}" element="div" class="no-space yComponentWrapper"/>
             </cms:pageSlot>
         </h1>
         <div>
             <h3>
                 <cms:pageSlot position="Section1HeaderContent" var="comp" element="div" class="">
-                    <cms:component component="${comp}" element="div" class=""/>
+                    <cms:component component="${comp}" element="div" class="no-space yComponentWrapper"/>
                 </cms:pageSlot>
             </h3>
             <cms:pageSlot position="Section1Content" var="comp" element="div" class="">
-                <cms:component component="${comp}" element="div" class=""/>
+                <cms:component component="${comp}" element="div" class="no-space yComponentWrapper"/>
             </cms:pageSlot>
         </div>
         <div class="text-right">
             <h3>
                 <cms:pageSlot position="Section2HeaderContent" var="comp" element="div" class="">
-                    <cms:component component="${comp}" element="div" class=""/>
+                    <cms:component component="${comp}" element="div" class="no-space yComponentWrapper"/>
                 </cms:pageSlot>
             </h3>
             <cms:pageSlot position="Section2Content" var="comp" element="div" class="">
-                <cms:component component="${comp}" element="div" class=""/>
+                <cms:component component="${comp}" element="div" class="no-space yComponentWrapper"/>
             </cms:pageSlot>
         </div>
         <hr/>

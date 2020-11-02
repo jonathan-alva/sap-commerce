@@ -311,6 +311,8 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-3 ; demo-homepage-spalsh-3-en
                                              ;                          ; DemoHompageSplashBannerComponent-4 ; demo-homepage-spalsh-4-en
                                              ;                          ; Section0BannerComponent            ; top-banner
+                                             ;                          ; MiddleContentTopBannerComponent            ; top-banner
+
 # Home page slot 2A
 
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = en];
