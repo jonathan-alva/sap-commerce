@@ -13,7 +13,7 @@ public class ProductSKUPopulator implements Populator<ProductModel, ProductData>
         // set product data property
         if(source instanceof TrainingVariantProductModel){
             TrainingVariantProductModel trainingVariantProductModel = (TrainingVariantProductModel) source;
-            target.setMaterial(trainingVariantProductModel.getMaterial());
+            target.setSku(trainingVariantProductModel.getSku());
         }
     }
 }
