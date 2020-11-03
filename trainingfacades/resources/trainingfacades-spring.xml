@@ -182,4 +182,18 @@
 	</bean>
 
 	<bean id="genderData" class="org.training.facades.product.data.GenderData" scope="prototype"/>
+
+	<alias name="defaultProductSKUPopulator" alias="productSKUPopulator"/>
+	<bean id="defaultProductSKUPopulator" class="org.training.facades.populators.ProductSKUPopulator">
+
+	</bean>
+
+	<alias name="defaultProductConfiguredPopulator" alias="productConfiguredPopulator"/>
+	<bean id="defaultProductConfiguredPopulator" class="de.hybris.platform.commercefacades.converter.impl.DefaultConfigurablePopulator">
+		<property name="populators">
+			<map key-type="de.hybris.platform.commercefacades.product.ProductOption">
+				<entry key="PRODUCT_SKU" value-ref="productSKUPopulator"/>
+			</map>
+		</property>
+	</bean>
 </beans>

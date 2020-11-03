@@ -29,6 +29,7 @@
 				</div>
 
 				<div class="col-sm-12 col-md-9 col-lg-6">
+					<div><span class="sku">Material: </span><span class="code">${fn:escapeXml(product.material)}</span></div>
 					<cms:pageSlot position="VariantSelector" var="component" element="div" class="page-details-variants-select">
 						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-variants-select-component"/>
 					</cms:pageSlot>
