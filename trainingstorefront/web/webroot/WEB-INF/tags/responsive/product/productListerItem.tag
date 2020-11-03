@@ -27,7 +27,8 @@
 		<ycommerce:testId code="searchPage_productName_link_${product.code}">
 			<a class="product__list--name" href="${fn:escapeXml(productUrl)}">${ycommerce:sanitizeHTML(product.name)}</a>
 		</ycommerce:testId>
-
+		<div>${ycommerce:sanitizeHTML(product.sku)}</div>
+		<div>${ycommerce:sanitizeHTML(product.material)}</div>
 		<div class="product__list--price-panel">
 			<c:if test="${not empty product.potentialPromotions}">
 				<div class="product__listing--promo">
