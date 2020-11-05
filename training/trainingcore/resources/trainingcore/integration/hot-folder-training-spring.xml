@@ -59,6 +59,11 @@
           p:mapping="training-product"
           p:converter-ref="batchTrainingProductConverter"/>
 
+    <bean id="batchTrainingProductVariantConverterMapping"
+          class="de.hybris.platform.acceleratorservices.dataimport.batch.converter.mapping.impl.DefaultConverterMapping"
+          p:mapping="training-variant"
+          p:converter-ref="batchTrainingProductVariantConverter"/>
+
     <alias name="trainingFileOrderComparator" alias="fileOrderComparator"/>
     <bean id="trainingFileOrderComparator" class="de.hybris.platform.acceleratorservices.dataimport.batch.FileOrderComparator">
         <property name="prefixPriority">
@@ -91,5 +96,22 @@
             </bean>
         </property>
         <property name="type" value="TrainingProduct"/>
+    </bean>
+
+    <bean id="batchTrainingProductVariantConverter" class="de.hybris.platform.acceleratorservices.dataimport.batch.converter.impl.DefaultImpexConverter">
+        <property name="header">
+            <value>
+                #{defaultImpexProductHeader}
+                # Insert Training Products
+                $baseProduct = baseProduct(code, $catalogVersion)
+                $lang=en
+                $langid=id
+
+                INSERT_UPDATE TrainingVariantProduct; $baseProduct; code[unique = true];name[lang=$lang];name[lang=$langid]; sku  ; material; description; unit()[pieces]; approvalstatus(code)[default='approved']; $catalogVersion
+            </value>
+        </property>
+        <property name="impexRow">
+            <value>;{+0};{+1};{+2};{+2};{3};{4};{5}</value>
+        </property>
     </bean>
 </beans>
