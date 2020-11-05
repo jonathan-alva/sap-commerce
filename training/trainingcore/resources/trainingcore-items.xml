@@ -25,6 +25,11 @@
             <value code="WHITE"/>
             <value code="YELLOW"/>
         </enumtype>
+        <enumtype generate="true" code="ActiveStatus" autocreate="true" dynamic="true">
+            <value code="ACTIVE"/>
+            <value code="INWAREHOUSE"/>
+            <value code="SOLDOUT"/>
+        </enumtype>
     </enumtypes>
 
     <itemtypes>
@@ -126,6 +131,12 @@
                     <attribute qualifier="material" type="java.lang.String">
                         <description>Material Product</description>
                         <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="activeStatus" type="ActiveStatus">
+                        <description>Active Status Product</description>
+                        <modifiers />
+                        <defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>
                         <persistence type="property"/>
                     </attribute>
                 </attributes>

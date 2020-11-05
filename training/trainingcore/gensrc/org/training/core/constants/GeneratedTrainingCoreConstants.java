@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Nov 3, 2020, 2:55:27 PM                     ---
+ * --- Generated at Nov 4, 2020, 9:43:15 AM                     ---
  * ----------------------------------------------------------------
  */
 package org.training.core.constants;
@@ -16,6 +16,7 @@ public class GeneratedTrainingCoreConstants
 	public static final String EXTENSIONNAME = "trainingcore";
 	public static class TC
 	{
+		public static final String ACTIVESTATUS = "ActiveStatus".intern();
 		public static final String APPARELPRODUCT = "ApparelProduct".intern();
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
@@ -30,6 +31,12 @@ public class GeneratedTrainingCoreConstants
 	}
 	public static class Enumerations
 	{
+		public static class ActiveStatus
+		{
+			public static final String ACTIVE = "ACTIVE".intern();
+			public static final String INWAREHOUSE = "INWAREHOUSE".intern();
+			public static final String SOLDOUT = "SOLDOUT".intern();
+		}
 		public static class SwatchColorEnum
 		{
 			public static final String BLACK = "BLACK".intern();

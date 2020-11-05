@@ -107,3 +107,16 @@ INSERT_UPDATE ServicelayerJob; code[unique = true]             ; springId[unique
 # Deactivate Frontend Restriction on category by default for perfomance purposes
 UPDATE SearchRestriction; code[unique = true]; active[default = false]
                         ; Frontend_RestrictedCategory
+
+
+INSERT_UPDATE ServicelayerJob; code[unique = true]                  ; springId[unique = true]
+                             ; trainingProductChangeActiveStatusJob ; trainingProductChangeActiveStatusJobPerformable
+
+INSERT_UPDATE CronJob; code[unique = true]                      ; job(code)                            ; singleExecutable; sessionLanguage(isocode)
+                     ; trainingProductChangeActiveStatusCronJob ; trainingProductChangeActiveStatusJob ; false           ; en
+
+#INSERT_UPDATE Trigger; cronJob(code)[unique = true]             ; second; minute; hour;day;month; year; relative; active; maxAcceptableDelay
+#                     ; trainingProductChangeActiveStatusCronJob ; 0     ; 10    ; -1  ; -1 ; -1 ; -1  ; true    ; true  ; -1
+
+INSERT_UPDATE Trigger; cronJob(code)[unique = true]             ; relative; active; maxAcceptableDelay; cronExpression
+                     ; trainingProductChangeActiveStatusCronJob ; true    ; true  ; -1                ; 0 0 1 ? * SUN *
