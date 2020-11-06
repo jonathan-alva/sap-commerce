@@ -8777,7 +8777,7 @@ ul.nav__links::after {
 .navigation--middle .nav__right ul.nav__links--shop_info .nav-location span {
   font-size: 30px;
   top: 27%;
-  color: #9e281f;
+  color: #149e52;
 }
 @media (min-width: 640px) {
   .navigation--middle .nav__right ul.nav__links--shop_info .nav-location {
@@ -8846,7 +8846,7 @@ ul.nav__links::after {
   }
 }
 .navigation--middle .nav-cart .mini-cart-link {
-  color: #9e281f;
+  color: #149e52;
 }
 @media (min-width: 640px) {
   .navigation--middle .nav-cart .mini-cart-link {
@@ -8859,7 +8859,7 @@ ul.nav__links::after {
     display: block;
   }
   .navigation--middle .nav-cart .mini-cart-link .mini-cart-icon {
-    color: #9e281f;
+    color: #149e52;
     left: -7px;
     top: 10px;
   }
@@ -8952,7 +8952,7 @@ ul.nav__links::after {
     position: relative;
     cursor: pointer;
     margin: 0 auto;
-    color: #9e281f;
+    color: #149e52;
     font-size: 29px;
     top: 2px;
   }
@@ -9005,7 +9005,7 @@ ul.nav__links::after {
     text-decoration: none;
   }
   .navigation--middle .mobile__nav__row--btn span.glyphicon {
-    color: #9e281f;
+    color: #149e52;
   }
 }
 .navigation--middle .mobile-menu {
@@ -9023,13 +9023,13 @@ ul.nav__links::after {
   position: relative;
   cursor: pointer;
   margin: 0 auto;
-  color: #9e281f;
+  color: #149e52;
   font-size: 29px;
   top: 2px;
 }
 .navigation--bottom {
-  background-color: #9e281f;
-  border-bottom: 1px solid #9e281f;
+  background-color: #149e52;
+  border-bottom: 1px solid #149e52;
 }
 @media (max-width: 1023px) {
   .navigation--bottom {
@@ -9074,7 +9074,7 @@ ul.nav__links::after {
   }
 }
 .navigation--bottom.js-enquire-offcanvas-navigation .close-nav button span {
-  color: #9e281f;
+  color: #149e52;
   font-size: 25px;
 }
 .navigation--bottom:before,
@@ -9466,7 +9466,7 @@ ul.nav__links::after {
     background-color: #ffffff;
     padding: 5px 12px 5px 20px;
     cursor: pointer;
-    color: #9e281f;
+    color: #149e52;
     display: inline-block;
     width: 80%;
     float: left;
@@ -9478,7 +9478,7 @@ ul.nav__links::after {
 @media (max-width: 1023px) {
   .navigation--bottom .userGroup a {
     border: none;
-    color: #9e281f;
+    color: #149e52;
   }
   .navigation--bottom .userGroup a:hover {
     background-color: transparent !important;
@@ -9585,7 +9585,7 @@ ul.nav__links::after {
     text-align: left;
     width: 80%;
     display: inline-block;
-    color: #9e281f;
+    color: #149e52;
     padding: 20px 30% 20px 50px;
   }
 }
@@ -9627,7 +9627,7 @@ ul.nav__links::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\e032";
-  color: #9e281f;
+  color: #149e52;
   font-size: 30px;
 }
 @media (max-width: 639px) {
@@ -13297,7 +13297,7 @@ a.product__listing .product__listing--promo:focus {
 }
 .cart__quote__edit .quote__head {
   color: #ffffff;
-  background-color: #9e281f;
+  background-color: #149e52;
   padding: 20px 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -13384,7 +13384,7 @@ textarea.quote__comments--textarea {
 .quote__comments--toggle:focus,
 .quote__form--toggle:focus {
   border: none;
-  outline: #9e281f;
+  outline: #149e52;
 }
 .quote__form--toggle {
   color: #ffffff;
