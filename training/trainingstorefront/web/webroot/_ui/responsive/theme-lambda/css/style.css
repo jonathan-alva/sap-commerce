@@ -18587,6 +18587,7 @@ header {
   flex-flow: row wrap;
   margin: 0 auto;
   justify-content: center;
+  margin-top: 2rem !important;
 }
 .item {
   width: 23%;
@@ -18608,8 +18609,30 @@ header {
 .card-data {
   padding: 2px 16px;
 }
+.card-img > img {
+  width: 180px;
+  margin-top: 10px;
+}
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.product-name {
+  font-family: "Comic Sans MS";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #169b6c;
+}
+.product-sku {
+  font-family: "MV Boli", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #619b56;
+}
+.product-material {
+  font-family: "MV Boli", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #619b56;
 }
 .skip,
 .skiptocontent,

@@ -22,16 +22,17 @@
             <cms:component component="${feature}" element="div" class="col-xs-12 col-sm-12 no-space yComponentWrapper"/>
         </cms:pageSlot>
         <div class="container d-flex">
-            <c:forEach items="${productList}" var="products">
+            <c:forEach items="${productList}" var="product">
                 <div class="item">
                     <div class="card">
                         <div class="card-data">
-                            <%--<a class="product__list--thumb" href="${fn:escapeXml(productUrl)}" title="${fn:escapeXml(product.name)}" >--%>
-                                <%--<product:productPrimaryImage product="${products}" format="thumbnail"/>--%>
-                            <%--</a>--%>
-                            <p>${products.getName()}</p>
-                            <p>${products.getSku()}</p>
-                            <p>${products.getMaterial()}</p>
+                            <a class="card-img" href=".${fn:escapeXml(product.url)}"
+                               title="${fn:escapeXml(product.name)}">
+                                <product:productPrimaryImage product="${product}" format="thumbnail"/>
+                            </a>
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-sku">${product.sku}</p>
+                            <p class="product-material">${product.material}</p>
                         </div>
                     </div>
                 </div>

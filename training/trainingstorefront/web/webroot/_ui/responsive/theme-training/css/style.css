@@ -8330,7 +8330,7 @@ output {
 }
 footer {
   margin-top: 30px;
-  background: #0f7384;
+  background: #1b8443;
   color: #ffffff;
   font-weight: 300;
 }
@@ -8397,7 +8397,7 @@ footer {
 }
 .footer__right .footer__dropdown .form-control {
   cursor: pointer;
-  background-color: #0f7384;
+  background-color: #1b8443;
   color: #ffffff;
   padding: 7px 10px;
   height: 26px;
@@ -8405,13 +8405,13 @@ footer {
   font-size: 14px;
 }
 .footer__right .footer__dropdown .form-control option {
-  background-color: #0f7384;
+  background-color: #1b8443;
 }
 .footer__right .footer__dropdown .form-control:focus::-ms-value {
-  background-color: #0f7384;
+  background-color: #1b8443;
 }
 .footer__copyright {
-  background: #005361;
+  background: #5ea454;
   padding: 25px 0;
   color: #ffffff;
   text-align: center;
@@ -8575,7 +8575,7 @@ ul.nav__links::after {
 }
 #accNavComponentDesktopOne ul.nav__links li:hover,
 #accNavComponentDesktopTwo ul.nav__links li:hover {
-  background-color: #0f7384;
+  background-color: #1b8443;
 }
 #accNavComponentDesktopOne ul.nav__links li a,
 #accNavComponentDesktopTwo ul.nav__links li a {
@@ -9149,7 +9149,7 @@ ul.nav__links::after {
     border-bottom: 1px solid #317f8c;
   }
   .navigation--bottom .nav__links--products li.liUserSign:hover {
-    background-color: #0f7384;
+    background-color: #1b8443;
   }
 }
 @media (max-width: 1023px) {
@@ -9421,7 +9421,7 @@ ul.nav__links::after {
   }
   .navigation--bottom .nav__links--mobile li {
     overflow: hidden;
-    background-color: #0f7384;
+    background-color: #1b8443;
     border: none;
   }
   .navigation--bottom .nav__links--mobile li a {
@@ -18593,6 +18593,7 @@ header {
   flex-flow: row wrap;
   margin: 0 auto;
   justify-content: center;
+  margin-top: 2rem !important;
 }
 .item {
   width: 23%;
@@ -18614,8 +18615,30 @@ header {
 .card-data {
   padding: 2px 16px;
 }
+.card-img > img {
+  width: 180px;
+  margin-top: 10px;
+}
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.product-name {
+  font-family: "Comic Sans MS";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #169b6c;
+}
+.product-sku {
+  font-family: "MV Boli", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #619b56;
+}
+.product-material {
+  font-family: "MV Boli", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #619b56;
 }
 .skip,
 .skiptocontent,
