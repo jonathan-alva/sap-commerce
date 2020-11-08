@@ -36,21 +36,21 @@ INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; SiteLogoComponent ; Site Logo Component ; SiteLogoComponent ; "/"
 
 # CMS Link Components
-INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]      ; name                          ; url                                       ; &linkRef                ; &componentRef           ; target(code)[default = 'sameWindow']; $category; $product;
-                              ;                          ; HomepageNavLink         ; Home Page Nav Link            ; /                                         ; HomepageNavLink         ; HomepageNavLink         ;                                     ;          ;         ;
-                              ;                          ; StoreFinderLink         ; Store Finder Link             ; /store-finder                             ; StoreFinderLink         ; StoreFinderLink         ;                                     ;          ;         ;
-                              ;                          ; LoginLink               ; Login Link                    ; /login                                    ; LoginLink               ; LoginLink               ;                                     ;          ;         ;
-                              ;                          ; AllBrandsCategoryLink   ; All Brands Category Link      ; /Bed/c/BED                                ; AllBrandsCategoryLink   ; AllBrandsCategoryLink   ;                                     ; BED      ;         ;
+INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]           ; name                          ; url                                       ; &linkRef                     ; &componentRef                ; target(code)[default = 'sameWindow']; $category; $product;
+                              ;                          ; HomepageNavLink              ; Home Page Nav Link            ; /                                         ; HomepageNavLink              ; HomepageNavLink              ;                                     ;          ;         ;
+                              ;                          ; StoreFinderLink              ; Store Finder Link             ; /store-finder                             ; StoreFinderLink              ; StoreFinderLink              ;                                     ;          ;         ;
+                              ;                          ; LoginLink                    ; Login Link                    ; /login                                    ; LoginLink                    ; LoginLink                    ;                                     ;          ;         ;
+                              ;                          ; AllBrandsCategoryLink        ; All Brands Category Link      ; /Bed/c/BED                                ; AllBrandsCategoryLink        ; AllBrandsCategoryLink        ;                                     ; BED      ;         ;
 #                              ;                          ; AllBedsCategoryLink     ; All Beds Link                 ; /Bed/c/BED                                ; AllBedsCategoryLink     ; AllBedsCategoryLink     ;                                     ; BED       ;         ;
-                              ;                          ; AllFashionsCategoryLink ; All Fashions Link             ; /c/FASHION                                ; AllFashionsCategoryLink ; AllFashionsCategoryLink ;                                     ; FASHION  ;         ;
-                              ;                          ; ShirtCategoryLink       ; Shirt Category Link           ; /c/SHIRT                                  ; ShirtCategoryLink       ; ShirtCategoryLink       ;                                     ; SHIRT    ;         ;
-                              ;                          ; TrouserCategoryLink     ; Trouser Category Link         ; /c/TROUSER                                ; TrouserCategoryLink     ; TrouserCategoryLink     ;                                     ; TROUSER  ;         ;
+                              ;                          ; AllFashionsCategoryLink      ; All Fashions Link             ; /c/FASHION                                ; AllFashionsCategoryLink      ; AllFashionsCategoryLink      ;                                     ; FASHION  ;         ;
+                              ;                          ; ShirtCategoryLink            ; Shirt Category Link           ; /c/SHIRT                                  ; ShirtCategoryLink            ; ShirtCategoryLink            ;                                     ; SHIRT    ;         ;
+                              ;                          ; TrouserCategoryLink          ; Trouser Category Link         ; /c/TROUSER                                ; TrouserCategoryLink          ; TrouserCategoryLink          ;                                     ; TROUSER  ;         ;
 #                              ;                          ; SpringBedCategoryLink   ; Spring Bed Link               ; /Bed/Springbed/c/SPRINGBED                ; SpringBedCategoryLink   ; SpringBedCategoryLink   ;                                     ; SPRINGBED ;         ;
 #                              ;                          ; SofaBedCategoryLink     ; Sofa Link                     ; /Bed/Sofa/c/SOFA                          ; SofaBedCategoryLink     ; SofaBedCategoryLink     ;                                     ; SOFA      ;         ;
-                              ;                          ; AboutUsLink             ; About us Link                 ; /Bed/Sofa/c/SOFA                          ; AboutUsLink             ; AboutUsLink             ;                                     ;          ;         ;
-                              ;                          ; BlogsLink               ; Blogs Link                    ; /Bed/Sofa/c/SOFA                          ; BlogsLink               ; BlogsLink               ;                                     ;          ;         ;
-                              ;                          ; GuaranteeLink           ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; GuaranteeLink           ; GuaranteeLink           ;                                     ;          ;         ;
-                              ;                          ; ConfirmationLink        ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; ConfirmationLink        ; ConfirmationLink        ;                                     ;          ;         ;
+                              ;                          ; AboutUsLink                  ; About us Link                 ; /Bed/Sofa/c/SOFA                          ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
+                              ;                          ; BlogsLink                    ; Blogs Link                    ; /Bed/Sofa/c/SOFA                          ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
+                              ;                          ; GuaranteeLink                ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; GuaranteeLink                ; GuaranteeLink                ;                                     ;          ;         ;
+                              ;                          ; ConfirmationLink             ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; ConfirmationLink             ; ConfirmationLink             ;                                     ;          ;         ;
 #                              ;;KodakBrandCategoryLink;Kodak Link;/Brands/Kodak/c/brand_88;KodakBrandCategoryLink;KodakBrandCategoryLink;;brand_88;;
 #                              ;;SamsungBrandCategoryLink;Samsung Link;/Brands/Samsung/c/brand_26;SamsungBrandCategoryLink;SamsungBrandCategoryLink;;brand_26;;
 #                              ;;ToshibaBrandCategoryLink;Toshiba Link;/Brands/Toshiba/c/brand_2;ToshibaBrandCategoryLink;ToshibaBrandCategoryLink;;brand_2;;
@@ -76,19 +76,21 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
 #                              ;;ColourFilmsCategoryLink;ColourFilms Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Colour-Films/c/597;ColourFilmsCategoryLink;ColourFilmsCategoryLink;;597;;
 #                              ;;BlackAndWhiteFilmsCategoryLink;Black And WhiteFilms Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Black-26-White-Films/c/598;BlackAndWhiteFilmsCategoryLink;BlackAndWhiteFilmsCategoryLink;;598;;
 #                              ;;BlankVideotapesCategoryLink;BlankVideotapes Category Link;/Open-Catalogue/Cameras/Camera-Accessories-26-Supplies/Blank-Video-Tapes/c/604;BlankVideotapesCategoryLink;BlankVideotapesCategoryLink;;604;;
-                              ;                          ; AboutSAPCommerceLink    ; About SAP Commerce Cloud Link ; "http://www.cx.sap.com/products/commerce" ; AboutSAPCommerceLink    ; AboutSAPCommerceLink    ; newWindow                           ;          ;         ;
-                              ;                          ; DocumentationLink       ; Documentation Link            ; "https://help.hybris.com"                 ; DocumentationLink       ; DocumentationLink       ; newWindow                           ;          ;         ;
-                              ;                          ; VisitSAPLink            ; Visit SAP Link                ; "http://www.cx.sap.com"                   ; VisitSAPLink            ; VisitSAPLink            ; newWindow                           ;          ;         ;
-                              ;                          ; ContactUsLink           ; Contact Us Link               ; "http://www.cx.sap.com/contact"           ; ContactUsLink           ; ContactUsLink           ; newWindow                           ;          ;         ;
-                              ;                          ; FacebookLink            ; Facebook Link                 ; "http://www.facebook.com/sapcx/"          ; FacebookLink            ; FacebookLink            ; newWindow                           ;          ;         ;
-                              ;                          ; TwitterLink             ; Twitter Link                  ; "http://www.twitter.com/SAP_CX"           ; TwitterLink             ; TwitterLink             ; newWindow                           ;          ;         ;
-                              ;                          ; AgileCommerceBlogLink   ; Agile Commerce Blog Link      ; "http://www.agile-commerce.com/"          ; AgileCommerceBlogLink   ; AgileCommerceBlogLink   ; newWindow                           ;          ;         ;
-                              ;                          ; LinkedInLink            ; Linked In Link                ; "http://www.linkedin.com/groups/5063400"  ; LinkedInLink            ; LinkedInLink            ; newWindow                           ;          ;         ;
-                              ;                          ; FAQLink                 ; FAQ Link                      ; /faq                                      ; FAQLink                 ; FAQLink                 ;                                     ;          ;         ;
-                              ;                          ; TermsAndConditionsLink  ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink  ; TermsAndConditionsLink  ;                                     ;          ;         ;
-                              ;                          ; NewLink                 ; New Link                      ; /new-page                                 ; NewLink                 ; NewLink                 ;                                     ;          ;         ;
-                              ;                          ; NewFAQLink              ; New FAQ Link                  ; /faq                                      ; NewFAQLink              ; NewFAQLink              ;                                     ;          ;         ;
-                              ;                          ; TopBannerHomepageLink   ; Top Banner Homepage Link      ; /top-banner-page                          ; TopBannerHomepageLink   ; TopBannerHomepageLink   ;                                     ;          ;         ;
+                              ;                          ; AboutSAPCommerceLink         ; About SAP Commerce Cloud Link ; "http://www.cx.sap.com/products/commerce" ; AboutSAPCommerceLink         ; AboutSAPCommerceLink         ; newWindow                           ;          ;         ;
+                              ;                          ; DocumentationLink            ; Documentation Link            ; "https://help.hybris.com"                 ; DocumentationLink            ; DocumentationLink            ; newWindow                           ;          ;         ;
+                              ;                          ; VisitSAPLink                 ; Visit SAP Link                ; "http://www.cx.sap.com"                   ; VisitSAPLink                 ; VisitSAPLink                 ; newWindow                           ;          ;         ;
+                              ;                          ; ContactUsLink                ; Contact Us Link               ; "http://www.cx.sap.com/contact"           ; ContactUsLink                ; ContactUsLink                ; newWindow                           ;          ;         ;
+                              ;                          ; FacebookLink                 ; Facebook Link                 ; "http://www.facebook.com/sapcx/"          ; FacebookLink                 ; FacebookLink                 ; newWindow                           ;          ;         ;
+                              ;                          ; TwitterLink                  ; Twitter Link                  ; "http://www.twitter.com/SAP_CX"           ; TwitterLink                  ; TwitterLink                  ; newWindow                           ;          ;         ;
+                              ;                          ; AgileCommerceBlogLink        ; Agile Commerce Blog Link      ; "http://www.agile-commerce.com/"          ; AgileCommerceBlogLink        ; AgileCommerceBlogLink        ; newWindow                           ;          ;         ;
+                              ;                          ; LinkedInLink                 ; Linked In Link                ; "http://www.linkedin.com/groups/5063400"  ; LinkedInLink                 ; LinkedInLink                 ; newWindow                           ;          ;         ;
+                              ;                          ; FAQLink                      ; FAQ Link                      ; /faq                                      ; FAQLink                      ; FAQLink                      ;                                     ;          ;         ;
+                              ;                          ; TermsAndConditionsLink       ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink       ; TermsAndConditionsLink       ;                                     ;          ;         ;
+                              ;                          ; NewLink                      ; New Link                      ; /new-page                                 ; NewLink                      ; NewLink                      ;                                     ;          ;         ;
+                              ;                          ; NewFAQLink                   ; New FAQ Link                  ; /faq                                      ; NewFAQLink                   ; NewFAQLink                   ;                                     ;          ;         ;
+                              ;                          ; TopBannerHomepageLink        ; Top Banner Homepage Link      ; /top-banner-page                          ; TopBannerHomepageLink        ; TopBannerHomepageLink        ;                                     ;          ;         ;
+                              ;                          ; ProductRecommendationLink    ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationLink    ; ProductRecommendationLink    ;                                     ;          ;         ;
+                              ;                          ; ProductRecommendationTopLink ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationTopLink ; ProductRecommendationTopLink ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -164,8 +166,9 @@ INSERT_UPDATE LanguageCurrencyComponent; $contentCV[unique = true]; uid[unique =
 INSERT_UPDATE ProductRefinementComponent; $contentCV[unique = true]; uid[unique = true]       ; name                               ; &componentRef
                                         ;                          ; RefinementFacetComponent ; Product Refinement Facet Component ; RefinementFacetComponent
 
-INSERT_UPDATE CMSProductListComponent; $contentCV[unique = true]; uid[unique = true]   ; name                   ; actions(uid, $contentCV)                    ; &componentRef
-                                     ;                          ; ProductListComponent ; Product List Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductListComponent
+INSERT_UPDATE CMSProductListComponent; $contentCV[unique = true]; uid[unique = true]                 ; name                                  ; actions(uid, $contentCV)                    ; &componentRef
+                                     ;                          ; ProductListComponent               ; Product List Component                ; ListPickUpInStoreAction,ListAddToCartAction ; ProductListComponent
+#                                     ;                          ; ProductRecommendationListComponent ; Product Recommendation List Component ;                                             ; ProductRecommendationListComponent
 
 INSERT_UPDATE ProductGridComponent; $contentCV[unique = true]; uid[unique = true]   ; name                   ; actions(uid, $contentCV)                    ; &componentRef
                                   ;                          ; ProductGridComponent ; Product Grid Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductGridComponent
@@ -1225,31 +1228,33 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
-                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode,NewNavNode,NewFAQNavNode,TermsAndConditionsNavNode
+                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode,NewNavNode,ProductRecommendationTopNavNode,NewFAQNavNode,TermsAndConditionsNavNode
 
 ## level 3. children of Category Nav ##
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]        ; $contentCV[unique = true]; name                       ; &nodeRef                  ; children(uid, $contentCV)   ; links(&linkRef);
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[unique = true]; name                         ; &nodeRef                        ; children(uid, $contentCV)   ; links(&linkRef);
 #                               ; AllBedsNavNode      ;                          ; All Bed Links      ; AllBedsNavNode      ; BedLinksNavNode
-                               ; AllFashionsNavNode        ;                          ; All Fashion Links          ; AllFashionsNavNode        ; ShirtNavNode,TrouserNavNode ;
-                               ; AboutUsNavNode            ;                          ; About Us Links             ; AboutUsNavNode            ;                             ;
-                               ; BlogsNavNode              ;                          ; Blogs Links                ; BlogsNavNode              ;                             ;
-                               ; GuaranteeNavNode          ;                          ; Guarantee Links            ; GuaranteeNavNode          ;                             ;
-                               ; ConfirmationNavNode       ;                          ; Confirmation Links         ; ConfirmationNavNode       ;                             ;
-                               ; NewNavNode                ;                          ; New Links                  ; NewNavNode                ;                             ;
-                               ; NewFAQNavNode             ;                          ; New FAQ Links              ; NewFAQNavNode             ;                             ;
-                               ; TermsAndConditionsNavNode ;                          ; Terms And Conditions Links ; TermsAndConditionsNavNode ;                             ;
+                               ; AllFashionsNavNode              ;                          ; All Fashion Links            ; AllFashionsNavNode              ; ShirtNavNode,TrouserNavNode ;
+                               ; AboutUsNavNode                  ;                          ; About Us Links               ; AboutUsNavNode                  ;                             ;
+                               ; BlogsNavNode                    ;                          ; Blogs Links                  ; BlogsNavNode                    ;                             ;
+                               ; GuaranteeNavNode                ;                          ; Guarantee Links              ; GuaranteeNavNode                ;                             ;
+                               ; ConfirmationNavNode             ;                          ; Confirmation Links           ; ConfirmationNavNode             ;                             ;
+                               ; NewNavNode                      ;                          ; New Links                    ; NewNavNode                      ;                             ;
+                               ; NewFAQNavNode                   ;                          ; New FAQ Links                ; NewFAQNavNode                   ;                             ;
+                               ; TermsAndConditionsNavNode       ;                          ; Terms And Conditions Links   ; TermsAndConditionsNavNode       ;                             ;
+                               ; ProductRecommendationTopNavNode ;                          ; Product Recommendation Links ; ProductRecommendationTopNavNode ;                             ;
 
 ## entries of the above navigation nodes ##
-INSERT_UPDATE CMSNavigationEntry; uid[unique = true]             ; $contentCV[unique = true]; name                                       ; navigationNode(&nodeRef)  ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
+INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $contentCV[unique = true]; name                                         ; navigationNode(&nodeRef)        ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
 #                                ; AllBedsNavNodeEntry      ;                          ; All Beds Category NavgaitionNode Entry ; AllBedsNavNode          ; AllBedsCategoryLink
-                                ; AboutUsNavNodeEntry            ;                          ; About Us Navigation Node Entry             ; AboutUsNavNode            ; AboutUsLink                                            ;
-                                ; BlogsNavNodeEntry              ;                          ; Blogs Navigation Node Entry                ; BlogsNavNode              ; BlogsLink                                              ;
-                                ; GuaranteeNavNodeEntry          ;                          ; Quarantee Navigation Node Entry            ; GuaranteeNavNode          ; GuaranteeLink                                          ;
-                                ; ConfirmationNavNodeEntry       ;                          ; Confirmation Navigation Node Entry         ; ConfirmationNavNode       ; ConfirmationLink                                       ;
-                                ; AllFashionsNavNodeEntry        ;                          ; All Fashions Navigation Node Entry         ; AllFashionsNavNode        ; AllFashionsCategoryLink                                ;
-                                ; NewNavNodeEntry                ;                          ; New Navigation Node Entry                  ; NewNavNode                ; NewLink                                                ;
-                                ; NewFAQNavNodeEntry             ;                          ; New FAQ Navigation Node Entry              ; NewFAQNavNode             ; NewFAQLink                                             ;
-                                ; TermsAndConditionsNavNodeEntry ;                          ; Terms And Conditions Navigation Node Entry ; TermsAndConditionsNavNode ; TermsAndConditionsLink                                 ;
+                                ; AboutUsNavNodeEntry                  ;                          ; About Us Navigation Node Entry               ; AboutUsNavNode                  ; AboutUsLink                                            ;
+                                ; BlogsNavNodeEntry                    ;                          ; Blogs Navigation Node Entry                  ; BlogsNavNode                    ; BlogsLink                                              ;
+                                ; GuaranteeNavNodeEntry                ;                          ; Quarantee Navigation Node Entry              ; GuaranteeNavNode                ; GuaranteeLink                                          ;
+                                ; ConfirmationNavNodeEntry             ;                          ; Confirmation Navigation Node Entry           ; ConfirmationNavNode             ; ConfirmationLink                                       ;
+                                ; AllFashionsNavNodeEntry              ;                          ; All Fashions Navigation Node Entry           ; AllFashionsNavNode              ; AllFashionsCategoryLink                                ;
+                                ; NewNavNodeEntry                      ;                          ; New Navigation Node Entry                    ; NewNavNode                      ; NewLink                                                ;
+                                ; NewFAQNavNodeEntry                   ;                          ; New FAQ Navigation Node Entry                ; NewFAQNavNode                   ; NewFAQLink                                             ;
+                                ; TermsAndConditionsNavNodeEntry       ;                          ; Terms And Conditions Navigation Node Entry   ; TermsAndConditionsNavNode       ; TermsAndConditionsLink                                 ;
+                                ; ProductRecommendationTopNavNodeEntry ;                          ; Product Recommendation Navigation Node Entry ; ProductRecommendationTopNavNode ; ProductRecommendationTopLink                           ;
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name; url; &linkRef; &componentRef; target(code)[default = 'sameWindow']; $category; $product;
@@ -1291,7 +1296,7 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 
 # children of FooterNavNode #
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; &nodeRef                     ; children(uid, $contentCV); links(&linkRef)
-                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; SAPCommerceNavNode           ; AboutSAPCommerceNavNode,FAQNavNode
+                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; SAPCommerceNavNode           ; AboutSAPCommerceNavNode,FAQNavNode,ProductRecommendationNavNode
                                ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; SAPCustomerExperienceNavNode ; AboutSAPCustomerExperienceNavNode,ContactUsNavNode
                                ; FollowUsNavNode              ;                          ; Follow Us Pages               ; FollowUsNavNode              ; AgileCommerceBlogNavNode,LinkedInNavNode,FacebookNavNode,TwitterNavNode
 
@@ -1359,13 +1364,28 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
 #INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                     ; &componentRef
 #                                   ;                          ; NewParagraphComponent               ; New Paragraph Component                  ; NewParagraphComponent
 
-INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]      ; name                ; urlLink          ; &componentRef
-                                             ;                          ; MiddleContentTopBannerComponent ; Homepage Top Banner ;  ; MiddleContentTopBannerComponent
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]              ; name                ; urlLink; &componentRef
+                                             ;                          ; MiddleContentTopBannerComponent ; Homepage Top Banner ;        ; MiddleContentTopBannerComponent
 
 # Create ContentSlots
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]                 ; name                                                ; active; cmsComponents(&componentRef)  ; ; ;
-                         ;                          ; MiddleContent-TopBannnerHomepage   ; Middle Content Slot for Top Banner Homepage Page    ; true  ; MiddleContentTopBannerComponent         ; ; ;
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]               ; name                                             ; active; cmsComponents(&componentRef)    ; ; ;
+                         ;                          ; MiddleContent-TopBannnerHomepage ; Middle Content Slot for Top Banner Homepage Page ; true  ; MiddleContentTopBannerComponent ; ; ;
 
 # Create Content Slots for Page
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]               ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'top-banner-page']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; MiddleContent-TopBannnerHomepage ; MiddleContent          ;                                                                  ; MiddleContent-TopBannnerHomepage
+
+###  Product Recommendation Page #######
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                      ; name                              ; urlLink; &componentRef
+                                             ;                          ; TopBannerProductRecommendationComponent ; Product Recommendation Top Banner ;        ; TopBannerProductRecommendationComponent
+
+# Create ContentSlots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]                        ; name                                              ; active; cmsComponents(&componentRef)            ; ; ;
+                         ;                          ; TopBanner-ProductRecommendationPage       ; Top Banner Slot for Product Recommendation Page   ; true  ; TopBannerProductRecommendationComponent ; ; ;
+#                         ;                          ; ProductRecommendationListSlot-ProductRecommendationPage ; Product List Slot for Product Recommendation Page ; true  ; ProductRecommendationListComponent      ; ; ;
+
+
+
+# Create Content Slots for Page
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                        ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'product-recommendation']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; TopBanner-ProductRecommendationPage       ; TopBanner              ;                                                                         ; TopBanner-ProductRecommendationPage

@@ -32,17 +32,17 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $pi
                             ;                          ; SiteLogoComponent ; /images/theme/logo-hybris.png ;
 
 # CMS Link Components
-UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]      ; linkName[lang = $lang]
-                       ;                          ; AboutSAPCommerceLink    ; "About SAP Commerce Cloud"
-                       ;                          ; AgileCommerceBlogLink   ; "Agile Commerce Blog"
-                       ;                          ; AllBrandsCategoryLink   ; "Brands"
-                       ;                          ; AllFashionsCategoryLink ; "All Fashions"
-                       ;                          ; ShirtCategoryLink       ; "Shirt"
-                       ;                          ; TrouserCategoryLink     ; "Trouser"
-                       ;                          ; AboutUsLink             ; "About Us"
-                       ;                          ; BlogsLink               ; "Blogs"
-                       ;                          ; GuaranteeLink           ; "Garansi"
-                       ;                          ; ConfirmationLink        ; "Konfirmasi"
+UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; linkName[lang = $lang]
+                       ;                          ; AboutSAPCommerceLink      ; "About SAP Commerce Cloud"
+                       ;                          ; AgileCommerceBlogLink     ; "Agile Commerce Blog"
+                       ;                          ; AllBrandsCategoryLink     ; "Brands"
+                       ;                          ; AllFashionsCategoryLink   ; "All Fashions"
+                       ;                          ; ShirtCategoryLink         ; "Shirt"
+                       ;                          ; TrouserCategoryLink       ; "Trouser"
+                       ;                          ; AboutUsLink               ; "About Us"
+                       ;                          ; BlogsLink                 ; "Blogs"
+                       ;                          ; GuaranteeLink             ; "Garansi"
+                       ;                          ; ConfirmationLink          ; "Konfirmasi"
 #                       ;;BlackAndWhiteFilmsCategoryLink;"Black & White Films"
 #                       ;;BlankVideotapesCategoryLink;"Blank Videotapes"
 #                       ;;CameraAccessoriesCategoryLink;"Camera Accessories & Supplies"
@@ -52,22 +52,22 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]      ; li
 #                       ;;CanonBrandCategoryLink;"Canon"
 #                       ;;ColourFilmsCategoryLink;"Color Films"
 #                       ;;ComponentsCategoryLink;"Components"
-                       ;                          ; ContactUsLink           ; "Contact Us"
+                       ;                          ; ContactUsLink             ; "Contact Us"
 #                       ;;DigitalCamerasCategoryLink;"Digital Cameras"
 #                       ;;DigitalCompactsCategoryLink;"Compact Cameras"
 #                       ;;DigitalSLRCategoryLink;"SLR Cameras"
-                       ;                          ; DocumentationLink       ; "Documentation"
-                       ;                          ; FAQLink                 ; "FAQ"
-                       ;                          ; FacebookLink            ; "Facebook"
+                       ;                          ; DocumentationLink         ; "Documentation"
+                       ;                          ; FAQLink                   ; "FAQ"
+                       ;                          ; FacebookLink              ; "Facebook"
 #                       ;;FilmCamerasCategoryLink;"Film Cameras"
 #                       ;;FlashMemoryCategoryLink;"Flash Memory"
 #                       ;;FujifilmBrandCategoryLink;"Fujifilm"
 #                       ;;HandheldCamcordersCategoryLink;"Hand Held Camcorders"
-                       ;                          ; HomepageNavLink         ; "Home"
+                       ;                          ; HomepageNavLink           ; "Home"
 #                       ;;IciduBrandCategoryLink;"Icidu"
 #                       ;;KingstonBrandCategoryLink;"Kingston"
 #                       ;;KodakBrandCategoryLink;"Kodak"
-                       ;                          ; LinkedInLink            ; "Linked In"
+                       ;                          ; LinkedInLink              ; "Linked In"
 #                       ;;PowerSuppliesCategoryLink;"Power Supplies"
 #                       ;;SamsungBrandCategoryLink;"Samsung"
 #                       ;;SonyBrandCategoryLink;"Sony"
@@ -76,11 +76,13 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]      ; li
 #                       ;;TDKBrandCategoryLink;"TDK"
 #                       ;;ToshibaBrandCategoryLink;"Toshiba"
 #                       ;;TripodsCategoryLink;"Tripods"
-                       ;                          ; TwitterLink             ; "Twitter"
-                       ;                          ; VisitSAPLink            ; "Visit SAP"
-                       ;                          ; NewLink                 ; "New"
-                       ;                          ; NewFAQLink              ; "FAQ"
-                       ;                          ; TermsAndConditionsLink  ; "Terms And Conditions"
+                       ;                          ; TwitterLink               ; "Twitter"
+                       ;                          ; VisitSAPLink              ; "Visit SAP"
+                       ;                          ; NewLink                   ; "New"
+                       ;                          ; NewFAQLink                ; "FAQ"
+                       ;                          ; TermsAndConditionsLink    ; "Terms And Conditions"
+                       ;                          ; ProductRecommendationLink ; "Product Recommendation"
+                       ;                          ; ProductRecommendationTopLink ; "Product Recommendation"
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                      ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; &imageRef                                ; folder(qualifier)[default = 'images']; altText
@@ -273,45 +275,48 @@ UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]  
 # Home Page Splash
 
 # Media Content
-INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]        ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite = true]; mime[default = 'image/jpeg']; realfilename             ; folder(qualifier)[default = 'images']; altText
-                   ; widescreen            ;                          ; banner-demo-1400x440.jpg   ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; widescreen            ;                          ; banner-2-demo-1400x440.jpg ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; widescreen            ;                          ; banner-3-demo-1400x440.jpg ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; widescreen            ;                          ; banner-4-demo-1400x440.jpg ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; widescreen            ;                          ; discount-banner-1400.png   ; $siteResource/images/banners/homepage/responsive/discount-banner-1400.png                      ;                             ; discount-banner-1400.png ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; widescreen            ;                          ; top-banner.jpg             ; $siteResource/images/banners/homepage/top-banner.jpg                                           ;                             ; top-banner.jpg           ;                                      ; "Top Banner Example"
-                   ; mobile                ;                          ; banner-demo-480x320.jpg    ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; mobile                ;                          ; banner-2-demo-480x320.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; mobile                ;                          ; banner-3-demo-480x320.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; mobile                ;                          ; banner-4-demo-480x320.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; mobile                ;                          ; discount-banner-480.png    ; $siteResource/images/banners/homepage/responsive/discount-banner-480.png                       ;                             ; discount-banner-480.png  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; tablet                ;                          ; banner-demo-770x350.jpg    ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; tablet                ;                          ; banner-2-demo-770x350.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; tablet                ;                          ; banner-3-demo-770x350.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; tablet                ;                          ; banner-4-demo-770x350.jpg  ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; tablet                ;                          ; discount-banner-770.png    ; $siteResource/images/banners/homepage/responsive/discount-banner-770.png                       ;                             ; discount-banner-770.png  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
-                   ; desktop               ;                          ; banner-demo-960x330.png    ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; desktop               ;                          ; banner-2-demo-960x330.png  ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; desktop               ;                          ; banner-3-demo-960x330.png  ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; desktop               ;                          ; banner-4-demo-960x330.png  ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png  ;                                      ; "Save Big On Select SLR & DSLR Cameras"
-                   ; desktop               ;                          ; discount-banner-960.png    ; $siteResource/images/banners/homepage/responsive/discount-banner-960.png                       ;                             ; discount-banner-960.png  ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[unique = true]                   ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite = true]; mime[default = 'image/jpeg']; realfilename                          ; folder(qualifier)[default = 'images']; altText
+                   ; widescreen            ;                          ; banner-demo-1400x440.jpg              ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg              ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; widescreen            ;                          ; banner-2-demo-1400x440.jpg            ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg              ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; widescreen            ;                          ; banner-3-demo-1400x440.jpg            ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg              ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; widescreen            ;                          ; banner-4-demo-1400x440.jpg            ; $siteResource/images/banners/homepage/responsive/banner-demo-1400x440.jpg                      ;                             ; banner-demo-1400x440.jpg              ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; widescreen            ;                          ; discount-banner-1400.png              ; $siteResource/images/banners/homepage/responsive/discount-banner-1400.png                      ;                             ; discount-banner-1400.png              ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; widescreen            ;                          ; top-banner.jpg                        ; $siteResource/images/banners/homepage/top-banner.jpg                                           ;                             ; top-banner.jpg                        ;                                      ; "Top Banner Example"
+                   ; widescreen            ;                          ; top-banner-product-recommendation.jpg ; $siteResource/images/banners/homepage/top-banner-product-recommendation.jpg                    ;                             ; top-banner-product-recommendation.jpg ;                                      ; "Top Banner Product Recommendation"
+                   ; mobile                ;                          ; banner-demo-480x320.jpg               ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; mobile                ;                          ; banner-2-demo-480x320.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; mobile                ;                          ; banner-3-demo-480x320.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; mobile                ;                          ; banner-4-demo-480x320.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-480x320.jpg                       ;                             ; banner-demo-480x320.jpg               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; mobile                ;                          ; discount-banner-480.png               ; $siteResource/images/banners/homepage/responsive/discount-banner-480.png                       ;                             ; discount-banner-480.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; tablet                ;                          ; banner-demo-770x350.jpg               ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; tablet                ;                          ; banner-2-demo-770x350.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; tablet                ;                          ; banner-3-demo-770x350.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; tablet                ;                          ; banner-4-demo-770x350.jpg             ; $siteResource/images/banners/homepage/responsive/banner-demo-770x350.jpg                       ;                             ; banner-demo-770x350.jpg               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; tablet                ;                          ; discount-banner-770.png               ; $siteResource/images/banners/homepage/responsive/discount-banner-770.png                       ;                             ; discount-banner-770.png               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; desktop               ;                          ; banner-demo-960x330.png               ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; desktop               ;                          ; banner-2-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; desktop               ;                          ; banner-3-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; desktop               ;                          ; banner-4-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
+                   ; desktop               ;                          ; discount-banner-960.png               ; $siteResource/images/banners/homepage/responsive/discount-banner-960.png                       ;                             ; discount-banner-960.png               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
 
-INSERT_UPDATE MediaContainer; qualifier[unique = true]  ; $medias; $contentCV[unique = true]
-                            ; demo-homepage-discount-en ; discount-banner-1400.png,discount-banner-960.png,discount-banner-770.png,discount-banner-480.png
-                            ; demo-homepage-spalsh-1-en ; banner-demo-1400x440.jpg,banner-demo-480x320.jpg,banner-demo-770x350.jpg,banner-demo-960x330.png
-                            ; demo-homepage-spalsh-2-en ; banner-2-demo-1400x440.jpg,banner-2-demo-480x320.jpg,banner-2-demo-770x350.jpg,banner-2-demo-960x330.png
-                            ; demo-homepage-spalsh-3-en ; banner-3-demo-1400x440.jpg,banner-3-demo-480x320.jpg,banner-3-demo-770x350.jpg,banner-3-demo-960x330.png
-                            ; demo-homepage-spalsh-4-en ; banner-4-demo-1400x440.jpg,banner-4-demo-480x320.jpg,banner-4-demo-770x350.jpg,banner-4-demo-960x330.png
-                            ; top-banner                ; top-banner.jpg
+INSERT_UPDATE MediaContainer; qualifier[unique = true]          ; $medias; $contentCV[unique = true]
+                            ; demo-homepage-discount-en         ; discount-banner-1400.png,discount-banner-960.png,discount-banner-770.png,discount-banner-480.png
+                            ; demo-homepage-spalsh-1-en         ; banner-demo-1400x440.jpg,banner-demo-480x320.jpg,banner-demo-770x350.jpg,banner-demo-960x330.png
+                            ; demo-homepage-spalsh-2-en         ; banner-2-demo-1400x440.jpg,banner-2-demo-480x320.jpg,banner-2-demo-770x350.jpg,banner-2-demo-960x330.png
+                            ; demo-homepage-spalsh-3-en         ; banner-3-demo-1400x440.jpg,banner-3-demo-480x320.jpg,banner-3-demo-770x350.jpg,banner-3-demo-960x330.png
+                            ; demo-homepage-spalsh-4-en         ; banner-4-demo-1400x440.jpg,banner-4-demo-480x320.jpg,banner-4-demo-770x350.jpg,banner-4-demo-960x330.png
+                            ; top-banner                        ; top-banner.jpg
+                            ; top-banner-product-recommendation ; top-banner-product-recommendation.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                 ; $mediaContainer
-                                             ;                          ; DemoHompageDiscountBannerComponent ; demo-homepage-discount-en
-                                             ;                          ; DemoHompageSplashBannerComponent-1 ; demo-homepage-spalsh-1-en
-                                             ;                          ; DemoHompageSplashBannerComponent-2 ; demo-homepage-spalsh-2-en
-                                             ;                          ; DemoHompageSplashBannerComponent-3 ; demo-homepage-spalsh-3-en
-                                             ;                          ; DemoHompageSplashBannerComponent-4 ; demo-homepage-spalsh-4-en
-                                             ;                          ; Section0BannerComponent            ; top-banner
-                                             ;                          ; MiddleContentTopBannerComponent            ; top-banner
+INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                      ; $mediaContainer
+                                             ;                          ; DemoHompageDiscountBannerComponent      ; demo-homepage-discount-en
+                                             ;                          ; DemoHompageSplashBannerComponent-1      ; demo-homepage-spalsh-1-en
+                                             ;                          ; DemoHompageSplashBannerComponent-2      ; demo-homepage-spalsh-2-en
+                                             ;                          ; DemoHompageSplashBannerComponent-3      ; demo-homepage-spalsh-3-en
+                                             ;                          ; DemoHompageSplashBannerComponent-4      ; demo-homepage-spalsh-4-en
+                                             ;                          ; Section0BannerComponent                 ; top-banner
+                                             ;                          ; MiddleContentTopBannerComponent         ; top-banner
+                                             ;                          ; TopBannerProductRecommendationComponent ; top-banner-product-recommendation
 
 # Home page slot 2A
 

@@ -40,6 +40,7 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
                   ;;training-page;"Training Page"
                   ;;new-page;"New Page"
                   ;;top-banner-page;"Top Banner Homepage Page"
+                  ;;product-recommendation;"Product Recommendation"
 
 
 # Category Pages

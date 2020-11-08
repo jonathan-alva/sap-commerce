@@ -1,0 +1,43 @@
+.wrapper{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+}
+header {
+  margin-bottom: auto;
+}
+
+.d-flex {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+.item {
+  width: 23%;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.item:nth-child(4n + 1):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 500%;
+  top: -30px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  &-data {
+    padding: 2px 16px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
