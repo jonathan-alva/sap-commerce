@@ -309,6 +309,11 @@
                   value="classpath:/trainingcore/processes/sendNotPickedUpConsignmentCanceledEmailProcess.xml"/>
     </bean>
 
+    <bean id="testActionProcessDefinitionResource"
+        class="de.hybris.platform.processengine.definition.ProcessDefinitionResource">
+        <property name="resource" value="classpath:/trainingcore/processes/testActionProcess.xml"/>
+    </bean>
+
     <!-- Actions -->
     <bean id="abstractAction" class="de.hybris.platform.processengine.action.AbstractAction"
           abstract="true">
@@ -450,6 +455,12 @@
         <property name="businessProcessService" ref="businessProcessService"/>
     </bean>
 
+    <bean id="testEventListener" class="org.training.core.event.TestEventListener"
+          parent="abstractAcceleratorSiteEventListener">
+        <property name="modelService" ref="modelService"/>
+        <property name="businessProcessService" ref="businessProcessService"/>
+    </bean>
+
     <bean id="quoteCancelEventListener" class="org.training.core.event.QuoteCancelEventListener"
           parent="abstractEventListener">
         <property name="modelService" ref="modelService"/>
@@ -581,6 +592,23 @@
           class="org.training.core.job.TrainingProductChangeActiveStatusJob" parent="abstractJobPerformable">
         <property name="modelService" ref="modelService"/>
         <property name="trainingProductService" ref="defaultTrainingProductService"/>
+    </bean>
+
+    <bean id="defaultTestAction" class="org.training.core.actions.training.TestAction" parent="abstractAction">
+    </bean>
+    <bean id="defaultTestActionStep2" class="org.training.core.actions.training.TestAction2" parent="abstractAction">
+    </bean>
+    
+    <bean id="trainingProductAfterSaveListener" class="org.training.core.listeners.TrainingProductAfterSaveListener">
+        <property name="modelService" ref="modelService"/>
+        <property name="commonI18NService" ref="commonI18NService"/>
+        <property name="eventService" ref="eventService"/>
+        <property name="baseSiteService" ref="baseSiteService"/>
+        <property name="userService" ref="userService"/>
+        <property name="workflowProcessingService" ref="workflowProcessingService"/>
+        <property name="workflowService" ref="newestWorkflowService"/>
+        <property name="workflowTemplateService" ref="workflowTemplateService"/>
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
 
 </beans>

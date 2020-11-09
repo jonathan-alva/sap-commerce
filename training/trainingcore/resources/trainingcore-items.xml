@@ -141,6 +141,14 @@
                     </attribute>
                 </attributes>
             </itemtype>
+            <itemtype code="TestActionProcess" extends="BusinessProcess" autocreate="true" generate="true" jaloclass="de.hybris.platform.commerceservices.jalo.process.TestActionProcess">
+                <attributes>
+                    <attribute qualifier="something" type="java.lang.String">
+                        <persistence type="property"/>
+                        <description>Something</description>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
 
     </itemtypes>

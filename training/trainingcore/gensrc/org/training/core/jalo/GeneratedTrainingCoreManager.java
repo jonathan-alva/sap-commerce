@@ -1,11 +1,12 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Nov 5, 2020, 4:54:18 PM                     ---
+ * --- Generated at Nov 9, 2020, 1:56:22 PM                     ---
  * ----------------------------------------------------------------
  */
 package org.training.core.jalo;
 
+import de.hybris.platform.commerceservices.jalo.process.TestActionProcess;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
@@ -150,6 +151,32 @@ public abstract class GeneratedTrainingCoreManager extends Extension
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final Map attributeValues)
 	{
 		return createElectronicsColorVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public TestActionProcess createTestActionProcess(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingCoreConstants.TC.TESTACTIONPROCESS );
+			return (TestActionProcess)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating TestActionProcess : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public TestActionProcess createTestActionProcess(final Map attributeValues)
+	{
+		return createTestActionProcess( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public TrainingProduct createTrainingProduct(final SessionContext ctx, final Map attributeValues)
