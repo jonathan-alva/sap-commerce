@@ -18590,7 +18590,7 @@ header {
   margin-top: 2rem !important;
 }
 .item {
-  width: 23%;
+  width: 215px;
   margin: 10px;
   text-align: center;
   position: relative;
@@ -18605,6 +18605,7 @@ header {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  border-radius: 5px;
 }
 .card-data {
   padding: 2px 16px;
@@ -18613,6 +18614,10 @@ header {
   width: 180px;
   margin-top: 10px;
 }
+.card-detail {
+  padding-top: 0.5rem;
+  border-top: 1px solid #169b6c;
+}
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -18620,19 +18625,19 @@ header {
   font-family: "Comic Sans MS";
   font-weight: 700;
   font-size: 1.4rem;
-  color: #169b6c;
+  color: #114b5f;
 }
 .product-sku {
-  font-family: "MV Boli", sans-serif;
+  font-family: "Calibri", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
-  color: #619b56;
+  color: #c6dabf;
 }
 .product-material {
   font-family: "MV Boli", sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
-  color: #619b56;
+  color: #1a936f;
 }
 .skip,
 .skiptocontent,

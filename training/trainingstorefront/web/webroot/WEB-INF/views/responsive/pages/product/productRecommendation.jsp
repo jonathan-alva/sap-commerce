@@ -24,17 +24,23 @@
         <div class="container d-flex">
             <c:forEach items="${productList}" var="product">
                 <div class="item">
-                    <div class="card">
-                        <div class="card-data">
-                            <a class="card-img" href=".${fn:escapeXml(product.url)}"
-                               title="${fn:escapeXml(product.name)}">
-                                <product:productPrimaryImage product="${product}" format="thumbnail"/>
-                            </a>
-                            <h3 class="product-name">${product.name}</h3>
-                            <p class="product-sku">${product.sku}</p>
-                            <p class="product-material">${product.material}</p>
+                    <a href=".${fn:escapeXml(product.url)}"
+                       title="${fn:escapeXml(product.name)}">
+
+                        <div class="card">
+                            <div class="card-data">
+                                <div class="card-img" >
+                                    <product:productPrimaryImage product="${product}" format="thumbnail"/>
+
+                                    <div class="card-detail">
+                                        <p class="product-name">${product.name}</p>
+                                        <p class="product-sku">${product.sku}</p>
+                                        <p class="product-material">${product.material}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </c:forEach>
