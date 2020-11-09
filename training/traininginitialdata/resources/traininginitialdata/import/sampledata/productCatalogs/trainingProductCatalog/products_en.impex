@@ -19,12 +19,12 @@ UPDATE TrainingProduct; code[unique = true]; $catalogVersion; name[lang = $lang]
                       ; HURLEY             ;                ; Hurley            ; Hurley T-Shirt
                       ; COLE               ;                ; Cole              ; Cole Jeans
 
-UPDATE TrainingVariantProduct; code[unique = true]; name[lang = $lang]
-                             ; PB-SHIRT-1         ; Pull & Bear Shirt 1
-                             ; PB-SHIRT-2         ; Pull & Bear Shirt 2
-                             ; CV-S1              ; Converse Shirt 1
-                             ; CV-S2              ; Converse Shirt 2
-                             ; HURLEY-T-1         ; Hurley Shirt 1
-                             ; HURLEY-T-2         ; Hurley Shirt 2
-                             ; COLE-T-1           ; Cole Jeans 1
+UPDATE TrainingVariantProduct; code[unique = true]; name[lang = $lang]  ; $catalogVersion
+                             ; PB-SHIRT-1         ; Pull & Bear Shirt 1 ;
+                             ; PB-SHIRT-2         ; Pull & Bear Shirt 2 ;
+                             ; CV-S1              ; Converse Shirt 1    ;
+                             ; CV-S2              ; Converse Shirt 2    ;
+                             ; HURLEY-T-1         ; Hurley Shirt 1      ;
+                             ; HURLEY-T-2         ; Hurley Shirt 2      ;
+                             ; COLE-T-1           ; Cole Jeans 1        ;
 
