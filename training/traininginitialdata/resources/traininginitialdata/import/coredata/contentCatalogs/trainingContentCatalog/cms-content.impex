@@ -463,39 +463,39 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
 
 
 # Create Content Slots
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]            ; name                            ; active
-                         ;                          ; SiteLogoSlot                  ; Default Site Logo Slot          ; true
-                         ;                          ; HomepageNavLinkSlot           ; Default Homepage Link           ; true
-                         ;                          ; MiniCartSlot                  ; Mini Cart                       ; true
-                         ;                          ; NavigationBarSlot             ; Navigation Bar                  ; true
-                         ;                          ; TabsSlot                      ; Tabs                            ; true
-                         ;                          ; WideContentSlot               ; Wide Content                    ; true
-                         ;                          ; TopContentSlot                ; Top Content                     ; true
-                         ;                          ; MiddleContentSlot             ; Middle Content                  ; true
-                         ;                          ; BottomContentSlot             ; Bottom Content                  ; true
-                         ;                          ; SideContentSlot               ; Side Content                    ; true
-                         ;                          ; FeatureContentSlot            ; Feature Content                 ; true
-                         ;                          ; FooterSlot                    ; Footer                          ; true
-                         ;                          ; HeaderLinksSlot               ; Header links                    ; true
-                         ;                          ; SearchBoxSlot                 ; Search Box                      ; true
-                         ;                          ; VariantSelectorSlot           ; Variant Selector                ; true
-                         ;                          ; AddToCartSlot                 ; Add To Cart                     ; true
-                         ;                          ; UpSellingSlot                 ; Up Selling                      ; true
-                         ;                          ; CrossSellingSlot              ; Cross Selling                   ; true
-                         ;                          ; TopHeaderSlot                 ; Top Header                      ; true
-                         ;                          ; BottomHeaderSlot              ; Bottom Header                   ; true
-                         ;                          ; ProductLeftRefinements        ; Refinements                     ; true
-                         ;                          ; ProductListSlot               ; Product List                    ; true
-                         ;                          ; ProductGridSlot               ; Product Grid                    ; true
-                         ;                          ; SearchResultsListSlot         ; Search Result List              ; true
-                         ;                          ; SearchResultsGridSlot         ; Search Result Grid              ; true
-                         ;                          ; LeftContentSlot               ; Left Content Slot               ; true
-                         ;                          ; RightContentSlot              ; Right Content Slot              ; true
-                         ;                          ; CenterContentSlot             ; Center Content Slot             ; true
-                         ;                          ; CenterLeftContentSlot         ; Center Left Content Slot        ; true
-                         ;                          ; CenterRightContentSlot        ; Center Right Content Slot       ; true
-                         ;                          ; EmptyCartMiddleContent        ; Empty Cart Middle Content       ; true
-                         ;                          ; PlaceholderContentSlot        ; Placeholder for Addon tag files ; true
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; name                            ; active
+                         ;                          ; SiteLogoSlot           ; Default Site Logo Slot          ; true
+                         ;                          ; HomepageNavLinkSlot    ; Default Homepage Link           ; true
+                         ;                          ; MiniCartSlot           ; Mini Cart                       ; true
+                         ;                          ; NavigationBarSlot      ; Navigation Bar                  ; true
+                         ;                          ; TabsSlot               ; Tabs                            ; true
+                         ;                          ; WideContentSlot        ; Wide Content                    ; true
+                         ;                          ; TopContentSlot         ; Top Content                     ; true
+                         ;                          ; MiddleContentSlot      ; Middle Content                  ; true
+                         ;                          ; BottomContentSlot      ; Bottom Content                  ; true
+                         ;                          ; SideContentSlot        ; Side Content                    ; true
+                         ;                          ; FeatureContentSlot     ; Feature Content                 ; true
+                         ;                          ; FooterSlot             ; Footer                          ; true
+                         ;                          ; HeaderLinksSlot        ; Header links                    ; true
+                         ;                          ; SearchBoxSlot          ; Search Box                      ; true
+                         ;                          ; VariantSelectorSlot    ; Variant Selector                ; true
+                         ;                          ; AddToCartSlot          ; Add To Cart                     ; true
+                         ;                          ; UpSellingSlot          ; Up Selling                      ; true
+                         ;                          ; CrossSellingSlot       ; Cross Selling                   ; true
+                         ;                          ; TopHeaderSlot          ; Top Header                      ; true
+                         ;                          ; BottomHeaderSlot       ; Bottom Header                   ; true
+                         ;                          ; ProductLeftRefinements ; Refinements                     ; true
+                         ;                          ; ProductListSlot        ; Product List                    ; true
+                         ;                          ; ProductGridSlot        ; Product Grid                    ; true
+                         ;                          ; SearchResultsListSlot  ; Search Result List              ; true
+                         ;                          ; SearchResultsGridSlot  ; Search Result Grid              ; true
+                         ;                          ; LeftContentSlot        ; Left Content Slot               ; true
+                         ;                          ; RightContentSlot       ; Right Content Slot              ; true
+                         ;                          ; CenterContentSlot      ; Center Content Slot             ; true
+                         ;                          ; CenterLeftContentSlot  ; Center Left Content Slot        ; true
+                         ;                          ; CenterRightContentSlot ; Center Right Content Slot       ; true
+                         ;                          ; EmptyCartMiddleContent ; Empty Cart Middle Content       ; true
+                         ;                          ; PlaceholderContentSlot ; Placeholder for Addon tag files ; true
 #                         ;                          ; ProductRecommendationListSlot ; Product Recommendation List     ; true
 
 
@@ -1029,32 +1029,47 @@ INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]       
 UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]                ; velocityTemplate[translator = de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
                    ;                          ; ProductRecommendationPageTemplate ; $jarResourceCms/structure-view/structure_productRecommendationPageTemplate.vm
 
-INSERT_UPDATE ContentSlotName; name[unique = true]           ; template(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; validComponentTypes(code)       ; compTypeGroup(code)
-                             ; SiteLogo                      ;                                                                                        ;                                 ; logo
-                             ; HeaderLinks                   ;                                                                                        ;                                 ; headerlinks
-                             ; SearchBox                     ;                                                                                        ;                                 ; searchbox
-                             ; MiniCart                      ;                                                                                        ;                                 ; minicart
-                             ; NavigationBar                 ;                                                                                        ;                                 ; navigation
-                             ; TopBanner                     ;                                                                                        ; SimpleResponsiveBannerComponent ;
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; validComponentTypes(code)       ; compTypeGroup(code)
+                             ; SiteLogo               ;                                                                                        ;                                 ; logo
+                             ; HeaderLinks            ;                                                                                        ;                                 ; headerlinks
+                             ; SearchBox              ;                                                                                        ;                                 ; searchbox
+                             ; MiniCart               ;                                                                                        ;                                 ; minicart
+                             ; NavigationBar          ;                                                                                        ;                                 ; navigation
+                             ; TopBanner              ;                                                                                        ; SimpleResponsiveBannerComponent ;
 #                             ; ProductRecommendationListSlot ;                                                                                        ;                                 ; wide
-                             ; Footer                        ;                                                                                        ;                                 ; footer
-                             ; TopHeaderSlot                 ;                                                                                        ;                                 ; wide
-                             ; BottomHeaderSlot              ;                                                                                        ;                                 ; wide
-                             ; PlaceholderContentSlot        ;                                                                                        ;                                 ;
+                             ; Footer                 ;                                                                                        ;                                 ; footer
+                             ; TopHeaderSlot          ;                                                                                        ;                                 ; wide
+                             ; BottomHeaderSlot       ;                                                                                        ;                                 ; wide
+                             ; PlaceholderContentSlot ;                                                                                        ;                                 ;
 
 # Bind Content Slots to Page Templates
-INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                                      ; position[unique = true]       ; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
-                                    ;                          ; SiteLogo-ProductRecommendationPage                      ; SiteLogo                      ;                                                                                            ; SiteLogoSlot                               ; true
-                                    ;                          ; HomepageLink-ProductRecommendationPage                  ; HomepageNavLink               ;                                                                                            ; HomepageNavLinkSlot                        ; true
-                                    ;                          ; NavigationBar-ProductRecommendationPage                 ; NavigationBar                 ;                                                                                            ; NavigationBarSlot                          ; true
-                                    ;                          ; MiniCart-ProductRecommendationPage                      ; MiniCart                      ;                                                                                            ; MiniCartSlot                               ; true
-                                    ;                          ; Footer-ProductRecommendationPage                        ; Footer                        ;                                                                                            ; FooterSlot                                 ; true
-                                    ;                          ; HeaderLinks-ProductRecommendationPage                   ; HeaderLinks                   ;                                                                                            ; HeaderLinksSlot                            ; true
-                                    ;                          ; SearchBox-ProductRecommendationPage                     ; SearchBox                     ;                                                                                            ; SearchBoxSlot                              ; true
-                                    ;                          ; TopHeaderSlot-ProductRecommendationPage                 ; TopHeaderSlot                 ;                                                                                            ; TopHeaderSlot                              ; true
-                                    ;                          ; BottomHeaderSlot-ProductRecommendationPage              ; BottomHeaderSlot              ;                                                                                            ; BottomHeaderSlot                           ; true
-                                    ;                          ; PlaceholderContentSlot-ProductRecommendationPage        ; PlaceholderContentSlot        ;                                                                                            ; PlaceholderContentSlot                     ; true
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                               ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; SiteLogo-ProductRecommendationPage               ; SiteLogo               ;                                                                                            ; SiteLogoSlot                               ; true
+                                    ;                          ; HomepageLink-ProductRecommendationPage           ; HomepageNavLink        ;                                                                                            ; HomepageNavLinkSlot                        ; true
+                                    ;                          ; NavigationBar-ProductRecommendationPage          ; NavigationBar          ;                                                                                            ; NavigationBarSlot                          ; true
+                                    ;                          ; MiniCart-ProductRecommendationPage               ; MiniCart               ;                                                                                            ; MiniCartSlot                               ; true
+                                    ;                          ; Footer-ProductRecommendationPage                 ; Footer                 ;                                                                                            ; FooterSlot                                 ; true
+                                    ;                          ; HeaderLinks-ProductRecommendationPage            ; HeaderLinks            ;                                                                                            ; HeaderLinksSlot                            ; true
+                                    ;                          ; SearchBox-ProductRecommendationPage              ; SearchBox              ;                                                                                            ; SearchBoxSlot                              ; true
+                                    ;                          ; TopHeaderSlot-ProductRecommendationPage          ; TopHeaderSlot          ;                                                                                            ; TopHeaderSlot                              ; true
+                                    ;                          ; BottomHeaderSlot-ProductRecommendationPage       ; BottomHeaderSlot       ;                                                                                            ; BottomHeaderSlot                           ; true
+                                    ;                          ; PlaceholderContentSlot-ProductRecommendationPage ; PlaceholderContentSlot ;                                                                                            ; PlaceholderContentSlot                     ; true
 #                                    ;                          ; ProductRecommendationListSlot-ProductRecommendationPage ; ProductRecommendationListSlot ;                                                                                            ; ProductRecommendationListSlot              ; true
 # Simple Content Pages
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]     ; name                   ; masterTemplate(uid, $contentCV)   ; label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
                          ;                          ; product-recommendation ; Product Recommendation ; ProductRecommendationPageTemplate ; product-recommendation
+
+
+### Training Workflow Start
+INSERT_UPDATE WorkflowTemplate; code[unique = true]  ; name[lang = en]; description[lang = en]         ; owner(User.uid);
+                              ; testWorkflowTemplate ; Test Workflow  ; Template with one simple tasks ; admin          ;
+
+INSERT_UPDATE WorkflowActionTemplate; code[unique = true]; name[lang = en]     ; principalAssigned(User.uid); owner(User.uid); workflow(WorkflowTemplate.code); actionType(code)
+                                    ; TestWorkflowStart  ; Test Workflow Start ; admin                      ; admin          ; testWorkflowTemplate           ; start
+                                    ; TestWorkflowEnd    ; Test Workflow End   ; admin                      ; admin          ; testWorkflowTemplate           ; end
+
+INSERT_UPDATE WorkflowDecisionTemplate; code[unique = true]; name[lang = en]; actionTemplate(code); description[allownull = true]; ; ; ; ; ;
+                                      ; TestWorkflowDone   ; Done           ; TestWorkflowStart   ;                              ; ; ; ; ; ;
+
+INSERT_UPDATE WorkflowActionTemplateLinkTemplateRelation; source(code)[unique = true]; target(code)[unique = true]; andConnectionTemplate; qualifier                                  ; ; ; ; ; ; ;
+                                                        ; TestWorkflowDone           ; TestWorkflowEnd            ; false                ; WorkflowActionTemplateLinkTemplateRelation ; ; ; ; ; ; ;

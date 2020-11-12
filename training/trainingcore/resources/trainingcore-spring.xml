@@ -588,6 +588,20 @@
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
 
+    <alias name="defaultGenericProductDao" alias="trainingGenericProductDao"/>
+    <bean name="defaultGenericProductDao" class="de.hybris.platform.servicelayer.internal.dao.DefaultGenericDao">
+        <constructor-arg value="Product"/>
+    </bean>
+
+    <bean id="trainingProductActiveStatusApprovalActionJob" class="org.training.core.workflow.actions.TrainingProductActiveStatusApprovalActionJob">
+    </bean>
+
+    <bean id="trainingProductActiveStatusRejectionActionJob" class="org.training.core.workflow.actions.TrainingProductActiveStatusRejectionActionJob">
+    </bean>
+
+    <bean id="trainingProductActiveStatusHotUpdateActionJob" class="org.training.core.workflow.actions.TrainingProductActiveStatusHotUpdateActionJob">
+    </bean>
+
     <bean id="trainingProductChangeActiveStatusJobPerformable"
           class="org.training.core.job.TrainingProductChangeActiveStatusJob" parent="abstractJobPerformable">
         <property name="modelService" ref="modelService"/>
